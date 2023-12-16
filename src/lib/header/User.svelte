@@ -68,10 +68,5 @@
 	}
 
 	@media screen and (max-width: 600px) {
-		.header__usuario {
-			width: 5.5rem;
-			height: 5.5rem;
-			margin-top: 6%;
-		}
 	}
 </style>

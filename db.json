@@ -1,0 +1,433 @@
+{
+   
+        "products": [
+          {
+            "id": 1,
+            "sale": false,
+            "name": "Corsair Vengeance LPX DDR4 3200MHz 32GB 2x32GB",
+            "type": "RAM",
+            "brand": "Corsair",
+            "GB": 32,
+            "logo": "/src/images/1441-corsair-vengeance-lpx-ddr4-3200mhz-pc4-25600-32gb-2x16gb-cl16.jpg",
+            "price": 175.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!",
+            "starts": 4
+          },
+          {
+            "id": 2,
+            "sale": false,
+            "name": "Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
+            "type": "RAM",
+            "GB": 8,
+            "brand": "Team Group",
+            "logo": "/src/images/1441-corsair-vengeance-lpx-ddr4-3200mhz-pc4-25600-32gb-2x16gb-cl16.jpg",
+            "price": 42.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!",
+            "starts": 2
+          },
+          {
+            "id": 3,
+            "sale": false,
+            "name": "Team Group Delta White RGB DDR4 3200 16GB 2x8GB CL16",
+            "type": "RAM",
+            "GB": 8,
+            "brand": "Team Group",
+            "logo": "/src/images/Team-Group-Delta.jpg",
+            "price": 45.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!",
+            "starts": 3
+          },
+          {
+            "id": 4,
+            "sale": false,
+            "name": "Corsair Vengeance DDR5 6000MHz 32 GB 2x16GB CL36",
+            "type": "RAM",
+            "GB": 16,
+            "brand": "Corsair",
+            "logo": "/src/images/2394-corsair-vengeance-ddr5-6000mhz-32-gb-2x16gb-cl36.jpg",
+            "price": 120,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!",
+            "starts": 5
+          },
+          {
+            "id": 5,
+            "sale": true,
+            "name": "Forgeon Mithril ARGB Mesh Torre ATX Negra",
+            "type": "PC_Case",
+            "brand": "Forgeon",
+            "logo": "/src/images/torre_negra.png",
+            "price": 99.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore.",
+            "starts": 4
+          },
+          {
+            "id": 6,
+            "sale": true,
+            "name": "Corsair Vengeance RGB DDR5",
+            "type": "RAM",
+            "brand": "Corsair",
+            "logo": "/src/images/ddr5.png",
+            "price": 259.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore.",
+            "starts": 2
+          },
+          {
+            "id": 7,
+            "sale": true,
+            "name": "Tempest PSU 750W Power Supply",
+            "type": "Power",
+            "brand": "Tempest",
+            "logo": "/src/images/fuente_alimentacion.png",
+            "price": 35.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore.",
+            "starts": 3
+          },
+          {
+            "id": 8,
+            "sale": true,
+            "name": "Forgeon Solarian Cooler CPU Fan",
+            "type": "Fan",
+            "brand": "Forgeon",
+            "logo": "/src/images/forgeon_ventilador.png",
+            "price": 33.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore.",
+            "starts": 5
+          },
+          {
+            "id": 9,
+            "sale": false,
+            "name": "Samsung SSD 250GB",
+            "type": "SSD",
+            "brand": "Samsung",
+            "logo": "/src/images/samsung250gb.png",
+            "price": 89.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "High-speed Samsung SSD with 250GB storage capacity.",
+            "starts": 2
+          },
+          {
+            "id": 10,
+            "sale": false,
+            "name": "Samsung SSD 500GB",
+            "type": "SSD",
+            "brand": "Samsung",
+            "logo": "/src/images/samsung250gb.png",
+            "price": 129.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "High-performance Samsung SSD with 500GB storage capacity.",
+            "starts": 4
+          },
+          {
+            "id": 11,
+            "sale": false,
+            "name": "Samsung SSD 1TB",
+            "type": "SSD",
+            "brand": "Samsung",
+            "logo": "/src/images/samsung250gb.png",
+            "price": 249.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "Large-capacity Samsung SSD with 1TB storage.",
+            "starts": 3
+          },
+          {
+            "id": 12,
+            "sale": false,
+            "name": "Samsung SSD 2TB",
+            "type": "SSD",
+            "brand": "Samsung",
+            "logo": "/src/images/samsung250gb.png",
+            "price": 449.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "Massive 2TB Samsung SSD for all your storage needs.",
+            "starts": 5
+          },
+          {
+            "id": 13,
+            "sale": false,
+            "name": "AMD Ryzen 5 5600X",
+            "type": "CPU",
+            "brand": "AMD",
+            "logo": "/src/images/ryzen5.png",
+            "price": 279.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "High-performance AMD Ryzen 5 processor for gaming and multitasking.",
+            "starts": 2
+          },
+          {
+            "id": 14,
+            "sale": false,
+            "name": "AMD Ryzen 7 5800X",
+            "type": "CPU",
+            "brand": "AMD",
+            "logo": "/src/images/ryzen7.png",
+            "price": 389.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "AMD Ryzen 7 processor with exceptional performance and efficiency.",
+            "starts": 4
+          },
+          {
+            "id": 15,
+            "sale": false,
+            "name": "Intel Core i5-11600K",
+            "type": "CPU",
+            "brand": "Intel",
+            "logo": "/src/images/i5.png",
+            "price": 269.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "Intel Core i5 processor with excellent performance for gaming and productivity.",
+            "starts": 3
+          },
+          {
+            "id": 16,
+            "sale": false,
+            "name": "Intel Core i7-12700K",
+            "type": "CPU",
+            "brand": "Intel",
+            "logo": "/src/images/i7.jpg",
+            "price": 469.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "Intel Core i7 processor with high-speed performance for demanding tasks.",
+            "starts": 5
+          },
+          {
+            "id": 17,
+            "sale": false,
+            "name": "MSI GeForce RTX 3070 Gaming X Trio",
+            "type": "GPU",
+            "brand": "MSI",
+            "logo": "/src/images/msi3070trio.jpg",
+            "price": 899.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "High-performance MSI GeForce RTX 3070 GPU for gaming and graphics workloads.",
+            "starts": 2
+          },
+          {
+            "id": 18,
+            "sale": false,
+            "name": "MSI GeForce GTX 1660 Super Ventus XS",
+            "type": "GPU",
+            "brand": "MSI",
+            "logo": "/src/images/ventusXS.jpg",
+            "price": 289.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],
+            "description": "MSI GeForce GTX 1660 Super GPU for smooth gaming performance.",
+            "starts": 4
+          },
+          {
+            "id": 19,
+            "sale": false,
+            "name": "NVIDIA GeForce RTX 3080 Ti",
+            "type": "GPU",
+            "brand": "NVIDIA",
+            "logo": "/src/images/NVIDIA3080ti.jpg",
+            "price": 1399.99,
+            "specifications": [
+              "Specification1",
+              "Specification2",
+              "Specification3",
+              "Specification4"
+            ],    
+            "description": "NVIDIA GeForce RTX 3080 Ti GPU for ultimate gaming and rendering.",
+            "starts": 3
+          },
+      {
+        "id": 20,
+        "sale": false,
+        "name": "NVIDIA GeForce GTX 1650",
+        "type": "GPU",
+        "brand": "NVIDIA",
+        "logo": "/src/images/NVIDIA1650.jpg",
+        "price": 179.99,
+        "specifications": [
+          "Specification1",
+          "Specification2",
+          "Specification3",
+          "Specification4"
+        ],
+        "description": "NVIDIA GeForce GTX 1650 GPU for budget-friendly gaming performance.",
+        "starts": 5
+      },
+      {
+        "id": 21,
+        "sale": false,
+        "name": "ASUS TUF Gaming GTX 1660 Super",
+        "type": "GPU",
+        "brand": "ASUS",
+        "logo": "/src/images/ASUS1660.jpg",
+        "price": 289.99,
+        "specifications": [
+          "Specification1",
+          "Specification2"
+        ],
+        "description": "ASUS TUF Gaming GTX 1660 Super for budget-friendly gaming performance.",
+        "starts": 4
+      },
+      {
+        "id": 22,
+        "sale": false,
+        "name": "MSI MPG B550 Gaming Plus Motherboard",
+        "type": "Motherboard",
+        "brand": "MSI",
+        "logo": "/src/images/MSIB550.jpg",
+        "price": 159.99,
+        "specifications": [
+          "Specification1",
+          "Specification2",
+          "Specification3",
+          "Specification4"
+        ],
+        "description": "MSI MPG B550 Gaming Plus Motherboard for gaming and performance builds.",
+        "starts": 3
+      },
+      {
+        "id": 23,
+        "sale": false,
+        "name": "MSI MAG B460M Mortar Micro-ATX Motherboard",
+        "type": "Motherboard",
+        "brand": "MSI",
+        "logo": "/src/images/MSImortar.jpg",
+        "price": 109.99,
+        "specifications": [
+          "Specification1",
+          "Specification2",
+          "Specification3",
+          "Specification4"
+        ],
+        "description": "MSI MAG B460M Mortar Micro-ATX Motherboard for compact gaming setups.",
+        "starts": 5
+      },
+      {
+        "id": 24,
+        "sale": false,
+        "name": "NVIDIA nForce 780i SLI Motherboard",
+        "type": "Motherboard",
+        "brand": "NVIDIA",
+        "logo": "/src/images/NVIDIA780i.jpg",
+        "price": 129.99,
+        "specifications": [
+          "Specification1",
+          "Specification2",
+          "Specification3",
+          "Specification4"
+        ],
+        "description": "NVIDIA nForce 780i SLI Motherboard for gaming and multi-GPU support.",
+        "starts": 3
+      },
+      {
+        "id": 25,
+        "sale": false,
+        "name": "NVIDIA nForce 680i SLI Motherboard",
+        "type": "Motherboard",
+        "brand": "NVIDIA",
+        "logo": "/src/images/NVIDIA680i.jpg",
+        "price": 99.99,
+        "specifications": [
+          "Specification1",
+          "Specification2",
+          "Specification3",
+          "Specification4"
+        ],
+        "description": "NVIDIA nForce 680i SLI Motherboard for budget-friendly gaming builds.",
+        "starts": 5
+      }
+    ]
+  }
+  
