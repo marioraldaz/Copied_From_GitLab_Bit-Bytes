@@ -17,7 +17,7 @@
 	}}
 >
 	<label for="ShoppingCart"
-		><img src="./images/carrito-de-compras.png" alt="ShoppingCart.png" /></label
+		><img src="src/images/carrito-de-compras.png" alt="ShoppingCart.png" /></label
 	>
 	<input type="checkbox" id="ShoppingCart" name="" bind:checked={visibility} />
 	{#if visibility}

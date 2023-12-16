@@ -28,7 +28,7 @@
 		</div>
 
 		<div class="header__logo">
-			<a href="/"><img src="./images/logo.png" alt="logo.png" /></a>
+			<a href="/"><img src="src/images/logo.png" alt="logo.png" /></a>
 		</div>
 	</div>
 
