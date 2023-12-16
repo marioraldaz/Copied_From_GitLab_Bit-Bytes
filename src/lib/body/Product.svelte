@@ -10,7 +10,7 @@
 
 <div class="component {clicked ? 'clicked' : 'notClicked'}">
 	<div class="component__side component__side--front">
-		<div class="component__img" style="background-image: url({product});" />
+		<div class="component__img" style="background-image: url({product.logo});" />
 		<div class="component__box--description">
 			<div class="component__name">{product.name}</div>
 			<div class="component__description">

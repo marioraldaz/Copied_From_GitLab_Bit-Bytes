@@ -1,21 +1,22 @@
 import { writable } from "svelte/store";
-import products from "../components/products.json";
 let usedComponents = [];
-let arrayProducts = products.products;
+let products =[];
 
 export function getComponents(component) {
   let array = [];
-  for (let product of arrayProducts) {
+  for (let product of products) {
     if (product.type == component) {
       array.push(product);
     }
   }
   return array;
 }
-
+export function setProducts(newProducts) {
+  products=newProducts;
+}
 export function getOffers(){
   let array = [];
-  for (let product of arrayProducts) {
+  for (let product of products) {
     if (product.sale) {
       array.push(product);
     }
@@ -31,7 +32,7 @@ export function calPrice(components) {
 }
 
 export function getProducts() {
-  return arrayProducts;
+  return products;
 
 }
 export default writable({
