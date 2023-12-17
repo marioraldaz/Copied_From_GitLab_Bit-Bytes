@@ -1,8 +1,9 @@
 <script>
 	import { getComponents } from '/src/stores/PC_Creator';
 	import ProductList from '/src/lib/body/ProductList.svelte';
+	export let products;
 	let GBs;
-	let products = getComponents('RAM');
+	products = getComponents(products, 'RAM');
 	let prices = [];
 	products.map((product) => prices.push(product.price));
 

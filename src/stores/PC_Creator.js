@@ -1,18 +1,16 @@
 import { writable } from "svelte/store";
 let usedComponents = [];
-let products =[];
+const products = [];
 
 export function getComponents(component) {
   let array = [];
+  console.log("<<<<<<<",products);
   for (let product of products) {
     if (product.type == component) {
       array.push(product);
     }
   }
   return array;
-}
-export function setProducts(newProducts) {
-  products=newProducts;
 }
 export function getOffers(){
   let array = [];
