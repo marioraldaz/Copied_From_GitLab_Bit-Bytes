@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	export let name = 'name';
 	export let logo = 'logo_default';
-	import Menus from '../../stores/menus.js';
+	//import Menus from '../../stores/menus.js';
 	import Nav from '../../stores/nav.js';
 
 	let menus = [];
@@ -10,10 +10,6 @@
 	function onClick() {
 		Nav.update((data) => {
 			data.visibility = false;
-			return data;
-		});
-		Menus.update((data) => {
-			data.active = name;
 			return data;
 		});
 	}
@@ -25,7 +21,7 @@
 	});
 </script>
 
-<a href="/#" on:click={onClick}>
+<a href={`/products/${name}`} on:click={onClick}>
 	<div class="elem-container">
 		<img src={logo} id={name} class="image" alt="logo-nav-elem" />
 		<span class="elem-name">{name}</span>
