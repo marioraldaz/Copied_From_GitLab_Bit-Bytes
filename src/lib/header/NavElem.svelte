@@ -21,7 +21,7 @@
 	});
 </script>
 
-<a href="/products/{name}">
+<a href="/products/{name}" on:click={onClick}>
 	<div class="elem-container">
 		<img src={logo} id={name} class="image" alt="logo-nav-elem" />
 		<span class="elem-name">{name}</span>

@@ -60,7 +60,7 @@
 
 {#if hiddenSearchBar}
 	<div class="header__searchBar">
-		<ImageSearch on:click={hiddenSearch} urlImage="src/images/search_logo.png" />
+		<ImageSearch on:click={hiddenSearch} urlImage="/src/images/search_logo.png" />
 	</div>
 {:else}
 	<div class="container" use:clickOutside on:click_outside={hiddenSearch}>

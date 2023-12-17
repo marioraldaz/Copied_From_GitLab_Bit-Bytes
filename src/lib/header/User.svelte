@@ -13,7 +13,7 @@
 	}}
 >
 	<label for="user">
-		<img src="src/images/usuario.png" alt="usuario.png" />
+		<img src="/src/images/usuario.png" alt="usuario.png" />
 	</label>
 	<input type="checkbox" id="user" name="" bind:checked={visibility} />
 

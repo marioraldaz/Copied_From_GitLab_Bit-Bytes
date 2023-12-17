@@ -1,6 +1,6 @@
 <script>
-  import { getComponents } from "../../stores/PC_Creator";
-  import ProductList from "../../body/ProductList.svelte";
+  import { getComponents } from "/src/stores/PC_Creator";
+  import ProductList from "/src/lib/body/ProductList.svelte";
   console.log(getComponents("SSD"));
 </script>
 

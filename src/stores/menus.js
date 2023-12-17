@@ -1,9 +1,9 @@
 import { writable } from "svelte/store";
 
-var RAMs = { name: "RAMs", logo: "src/images/RAM.png" };
+var RAMs = { name: "RAMs", logo: "/src/images/RAM.png" };
 var MotherBoards = {
   name: "Motherboards",
-  logo: "src/stores/images/MotherBoard.png",
+  logo: "/src/stores/images/MotherBoard.png",
 };
 var CPUs = { name: "CPUs", logo: "/src/images/CPU.png" };
 var SSDs = { name: "SSDs", logo: "/src/images/SSD.png" };
