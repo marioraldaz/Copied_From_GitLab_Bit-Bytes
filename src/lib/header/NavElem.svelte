@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	export let name = 'name';
 	export let logo = 'logo_default';
-	//import Menus from '../../stores/menus.js';
+	import Menus from '../../stores/menus.js';
 	import Nav from '../../stores/nav.js';
 
 	let menus = [];
@@ -21,7 +21,7 @@
 	});
 </script>
 
-<a href={`/products/${name}`}>
+<a href="/products/{name}">
 	<div class="elem-container">
 		<img src={logo} id={name} class="image" alt="logo-nav-elem" />
 		<span class="elem-name">{name}</span>

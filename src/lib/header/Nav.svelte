@@ -23,7 +23,6 @@
 	function hide() {
 		hideAnimation = true;
 		setTimeout(() => {
-			console.log('dhoas');
 			Nav.update((data) => {
 				data.visibility = false;
 				return data;
