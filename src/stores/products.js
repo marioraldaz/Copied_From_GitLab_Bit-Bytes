@@ -35,4 +35,5 @@ export function getProducts() {
 }
 export default writable({
   usedComponents,
+  products
 })
