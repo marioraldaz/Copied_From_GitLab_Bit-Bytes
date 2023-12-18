@@ -1,17 +1,6 @@
 <script>
 	import Caroussel from './Caroussel.svelte';
-	import {onMount} from "svelte";
-	import Products from "/src/stores/products.js";
-	import { getComponents, getOffers, setProducts } from '/src/stores/products.js';
-	//setProducts(data.products);
-	export let data;
-
-	onMount(()=>{
-		return Products.update((data)=>{
-			data.products = data;
-		})
-	})
-	let products=data;
+	import { getComponents, getOffers, getProducts } from '../../stores/products.js';
 
 	let bodyCaroussels = [
 		{

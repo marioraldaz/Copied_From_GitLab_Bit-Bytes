@@ -1,25 +1,32 @@
 import { writable } from "svelte/store";
 let usedComponents = [];
-const products = [];
+let products = [];
 
 export function getComponents(component) {
-  let array = [];
-  console.log("<<<<<<<",products);
-  for (let product of products) {
-    if (product.type == component) {
-      array.push(product);
+  let productsToReturn = [];
+  productsStore.subscribe((data)=>{
+    products = data.products;
+    for (let product of products) {
+      if (product.type==component) {
+        productsToReturn.push(product);
+      }
     }
-  }
-  return array;
+    return data;
+  });
+  return productsToReturn;
 }
 export function getOffers(){
-  let array = [];
-  for (let product of products) {
-    if (product.sale) {
-      array.push(product);
+  let productsToReturn = [];
+  productsStore.subscribe((data)=>{
+    products = data.products;
+    for (let product of products) {
+      if (product.sale) {
+        productsToReturn.push(product);
+      }
     }
-  }
-  return array;
+    return data;
+  });
+  return productsToReturn;
 }
 export function calPrice(components) {
   let totalPrice = 0;
@@ -30,10 +37,23 @@ export function calPrice(components) {
 }
 
 export function getProducts() {
-  return products;
-
+  let productsToReturn = [];
+  productsStore.subscribe((data)=>{
+    productsToReturn = data.products;
+    return data;
+  });
+  return productsToReturn;
 }
-export default writable({
+
+export function setProducts(products) {
+  productsStore.update((data)=>{
+    data.products = products;
+    return data;
+  });
+}
+const productsStore = writable({
   usedComponents,
   products
 })
+
+export default productsStore;
