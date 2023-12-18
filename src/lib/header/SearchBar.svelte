@@ -1,10 +1,10 @@
 <script>
-	//import products from '../components/products.json';
+	import products from '../components/products.json';
 	import Menus from '../../stores/menus.js';
 	import ResultsPage from '../../stores/ResultsPage.js';
 	import { clickOutside } from '../../scripts/clickOutside.js';
 	import ImageSearch from './ImageSearch.svelte';
-	let products = [];
+
 	let arrayProducts = products.products;
 	let output = arrayProducts;
 	let showResults = false;
@@ -60,11 +60,11 @@
 
 {#if hiddenSearchBar}
 	<div class="header__searchBar">
-		<ImageSearch on:click={hiddenSearch} urlImage="/src/images/search_logo.png" />
+		<ImageSearch on:click={hiddenSearch} urlImage="src/images/search_logo.png" />
 	</div>
 {:else}
-	<div class="container" use:clickOutside on:click_outside={hiddenSearch}>
-		<div class="container__searchBar">
+	<div class="container">
+		<div class="container__searchBar" use:clickOutside on:click_outside={hiddenSearch}>
 			<input
 				type="search"
 				class="container__searchBar--input"
@@ -74,13 +74,13 @@
 
 			<button class="container__search-button" on:click={showSearchResults([])}>
 				<div class="container__search-button__div">
-					<img alt="logo" src="/src/images/search_logo.png" />
+					<img alt="logo" src="src/images/search_logo.png" />
 				</div>
 			</button>
 		</div>
 
 		{#if showResults}
-			<div class="container__results">
+			<div class="container__results" use:clickOutside on:click_outside={hideResults}>
 				<h1 class="container__results__title">Results:</h1>
 				{#each output.slice(0, 5) as item}
 					<button class="container__results__elem" on:click={showSearchResults([item])}>
@@ -95,10 +95,6 @@
 
 <style lang="scss">
 	.header__searchBar {
-		float: right;
-		position: relative;
-		top: 27%;
-		left: -5%;
 		height: auto;
 		animation: hideicon;
 		animation-duration: 5s;
@@ -106,13 +102,10 @@
 	}
 
 	.container {
-		position: relative;
-		top: -10%;
 		width: 45rem;
 		height: 5rem;
-		transform: translate(0%, 50%);
-		float: right;
-
+		display: flex;
+		justify-content: center;
 		transition: all 2s ease-out;
 
 		&__results {
@@ -152,7 +145,7 @@
 
 		&__searchBar {
 			position: relative;
-			float: right;
+
 			width: 80%;
 			height: 100%;
 			border-radius: 2rem;

@@ -27,16 +27,15 @@
 			<Menu />
 		</div>
 
+		{#if active != 'Body'}
+			<div class="header__home">
+				<a href="/#" on:click={onClick}>Home</a>
+			</div>
+		{/if}
 		<div class="header__logo">
 			<a href="/"><img src="/src/images/logo.png" alt="logo.png" /></a>
 		</div>
 	</div>
-
-	{#if active != 'Body'}
-		<div class="header__home">
-			<a href="/#" on:click={onClick}>Home</a>
-		</div>
-	{/if}
 
 	<div class="header__right">
 		<ShoppingCart />
@@ -46,11 +45,9 @@
 </div>
 
 <style lang="scss">
-	.header__right {
-		float: right;
-		width: 40%;
-	}
 	.header {
+		display: flex;
+		justify-content: space-between;
 		position: fixed;
 		height: 8.2rem;
 		width: 100%;
@@ -64,28 +61,31 @@
 		z-index: 100;
 
 		&__left {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 60%;
 			height: inherit;
-			display: inline-block;
 
 			&__Menu {
-				position: fixed;
+				height: 100%;
+				display: inline-block;
 				animation: hideicon;
 				animation-duration: 4s;
 				animation-timing-function: ease-in;
 			}
 		}
 		&__right {
-			display: inline;
-			height: inherit;
+			display: flex;
+			align-items: center;
+			flex-direction: row-reverse;
+			flex: 1;
 		}
 		&__logo {
-			display: inline-block;
-			height: 8.2rem;
+			height: 8rem;
+			align-self: flex-start;
 		}
 		&__logo img {
-			position: absolute;
-			left: 50%;
-			transform: translate(-50%);
 			height: 100%;
 			animation: introLogo;
 			animation-duration: 2.5s;
@@ -93,10 +93,7 @@
 		}
 
 		&__home {
-			position: absolute;
 			font-size: 3rem;
-			top: 25%;
-			left: 12%;
 			padding: 0.5rem;
 
 			a {
@@ -122,7 +119,7 @@
 		@keyframes introLogo {
 			0% {
 				opacity: 0;
-				height: 50%;
+				height: 50vh;
 			}
 			100% {
 				opacity: 1;
