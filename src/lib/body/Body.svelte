@@ -1,8 +1,8 @@
 <script>
 	import Caroussel from './Caroussel.svelte';
 	import {onMount} from "svelte";
-	import Products from "src/stores/products.js";
-	import { getComponents, getOffers, setProducts } from '/src/stores/products';
+	import Products from "/src/stores/products.js";
+	import { getComponents, getOffers, setProducts } from '/src/stores/products.js';
 	//setProducts(data.products);
 	export let data;
 

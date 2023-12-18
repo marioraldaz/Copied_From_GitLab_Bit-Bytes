@@ -1,5 +1,5 @@
 <script>
-	import { getComponents } from '/src/stores/PC_Creator';
+	import { getComponents } from '/src/stores/products';
 	import ProductList from '/src/lib/body/ProductList.svelte';
 	export let products;
 	let GBs;
