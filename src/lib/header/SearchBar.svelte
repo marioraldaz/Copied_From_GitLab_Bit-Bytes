@@ -52,7 +52,17 @@
 			});
 		};
 	}
+	function replaceLeftPartWithSrcImages(inputString) {
+		const prefix = '/images';
+		const index = inputString.indexOf(prefix);
 
+		if (index !== -1) {
+			return '/src' + inputString.slice(index);
+		} else {
+			// If "/images" is not found, return the original string
+			return inputString;
+		}
+	}
 	function hideResults() {
 		showResults = false;
 	}
@@ -84,7 +94,11 @@
 				<h1 class="container__results__title">Results:</h1>
 				{#each output.slice(0, 5) as item}
 					<button class="container__results__elem" on:click={showSearchResults([item])}>
-						<img src={item.logo} class="container__results__elem__img" alt="img" />
+						<img
+							src={replaceLeftPartWithSrcImages(item.logo)}
+							class="container__results__elem__img"
+							alt="img"
+						/>
 						{item.name}</button
 					>
 				{/each}

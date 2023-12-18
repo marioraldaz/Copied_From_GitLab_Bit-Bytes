@@ -3,4 +3,4 @@
 	export let data;
 </script>
 
-<Body products={data} />
+<Body />

@@ -54,6 +54,7 @@
 	}
 
 	.cuerpo {
+		display: flex;
 		margin-top: 9rem;
 		overflow: hidden;
 		width: 100%;

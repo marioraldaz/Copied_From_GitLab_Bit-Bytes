@@ -10,7 +10,7 @@ var SSDs = { name: "SSDs", logo: "/src/images/SSD.png" };
 var GPUs = { name: "GPUs", logo: "/src/images/GPU.png" };
 var Body = { name: "Body" };
 var PC_Creator = {
-  name: "PC Creator",
+  name: "PC_Creator",
   logo: "/src/images/PC_Creator_logo.png",
 };
 const menus = [Body, RAMs, MotherBoards, CPUs, SSDs, GPUs, PC_Creator];

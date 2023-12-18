@@ -8,9 +8,9 @@
 	import PC_Creator from '/src/lib/components/PC_Creator/PC_Creator.svelte';
 	import ResultsPage from '/src/lib/header/ResultsPage.svelte';
 
-	export let data;
-	const products = data;
 	let productType = $page.params.productType;
+	$: productType = $page.params.productType;
+
 	let types = [
 		{
 			type: 'RAMs',
@@ -19,13 +19,38 @@
 		{
 			type: 'SSDs',
 			component: SSDs
+		},
+		{
+			type: 'CPUs',
+			component: CPUs
+		},
+		{
+			type: 'GPUs',
+			component: GPUs
+		},
+		{
+			type: 'MotherBoards',
+			component: MotherBoards
+		},
+		{
+			type: 'PC_Creator',
+			component: PC_Creator
+		},
+		{
+			type: 'ResultsPage',
+			component: ResultsPage
 		}
 	];
 	let typeToShow = types.find((elem) => elem.type == productType);
-	console.log(typeToShow);
 </script>
 
-<svelte:component this={typeToShow.component} {products} />
+{#key $page.params.productType}
+	{#if typeToShow}
+		<svelte:component this={typeToShow.component} />
+	{:else}
+		<p>Invalid product type</p>
+	{/if}
+{/key}
 
 <style>
 </style>
