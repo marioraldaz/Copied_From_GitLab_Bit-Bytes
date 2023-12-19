@@ -52,25 +52,11 @@
 			});
 		};
 	}
-	function replaceLeftPartWithSrcImages(inputString) {
-		const prefix = '/images';
-		const index = inputString.indexOf(prefix);
-
-		if (index !== -1) {
-			return '/src' + inputString.slice(index);
-		} else {
-			// If "/images" is not found, return the original string
-			return inputString;
-		}
-	}
-	function hideResults() {
-		showResults = false;
-	}
 </script>
 
 {#if hiddenSearchBar}
 	<div class="header__searchBar">
-		<ImageSearch on:click={hiddenSearch} urlImage="/src/images/search_logo.png" />
+		<ImageSearch on:click={hiddenSearch} urlImage="/src/lib/header/images//search_logo.png" />
 	</div>
 {:else}
 	<div class="container">
@@ -84,7 +70,7 @@
 
 			<button class="container__search-button" on:click={showSearchResults([])}>
 				<div class="container__search-button__div">
-					<img alt="logo" src="/src/images/search_logo.png" />
+					<img alt="logo" src="/src/lib/header/images/search_logo.png" />
 				</div>
 			</button>
 		</div>

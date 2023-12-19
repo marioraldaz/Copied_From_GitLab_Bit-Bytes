@@ -33,7 +33,7 @@
 			</div>
 		{/if}
 		<div class="header__logo">
-			<a href="/"><img src="/src/images/logo.png" alt="logo.png" /></a>
+			<a href="/"><img src="src/lib/header/images/logo.png" alt="logo.png" /></a>
 		</div>
 	</div>
 

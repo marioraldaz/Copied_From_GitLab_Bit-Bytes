@@ -1,7 +1,7 @@
 <script>
 	import LogIn from './LogIn.svelte';
 	import { clickOutside } from '../../scripts/clickOutside';
-	import userImg from '../../images/usuario.png';
+	import userImg from '/src/lib/header/images/usuario.png';
 
 	let visibility = false;
 </script>
@@ -17,7 +17,7 @@
 		<img src={userImg} alt="usuario.png" />
 	</label>
 	<input type="checkbox" id="user" name="" bind:checked={visibility} />
-
+	r
 	{#if visibility}
 		<div class="container">
 			<LogIn visibility />

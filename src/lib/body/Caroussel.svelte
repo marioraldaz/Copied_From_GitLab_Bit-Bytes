@@ -75,7 +75,7 @@
 	<div class="container__caroussel">
 		<button class="container__caroussel__previousButton" on:click={moveLeft}>
 			<img
-				src="/src/images/left-arrow.png"
+				src="/src/lib/body/images/left-arrow.png"
 				alt="izq"
 				class="container__caroussel__previousButton__img"
 			/>
@@ -125,7 +125,7 @@
 		{/key}
 		<button class="container__caroussel__nextButton" on:click={moveRight}>
 			<img
-				src="src/images/right-arrow.png"
+				src="/src/lib/body/images/right-arrow.png"
 				alt="izq"
 				class="container__caroussel__nextButton__img"
 			/>

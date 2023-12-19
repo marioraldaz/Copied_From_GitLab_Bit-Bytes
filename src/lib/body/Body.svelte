@@ -5,34 +5,38 @@
 	let bodyCaroussels = [
 		{
 			products: getOffers(),
-			mainImg: 'src/images/offer-removebg-preview.png'
+			mainImg: 'src/lib/body/images/offer-removebg-preview.png'
 		},
 		{
 			products: getComponents('Motherboard'),
-			mainImg: 'src/images/MSImortar.jpg'
+			mainImg: 'http://localhost:4000/MSImortar.jpg'
 		},
 		{
 			products: getComponents('CPU'),
-			mainImg: 'src/images/MSImortar.jpg'
+			mainImg: 'http://localhost:4000/MSImortar.jpg'
 		},
 		{
 			products: getComponents('RAM'),
-			mainImg: 'src/images/MSImortar.jpg'
+			mainImg: 'http://localhost:4000/MSImortar.jpg'
 		},
 		{
 			products: getComponents('SSD'),
-			mainImg: 'src/images/MSImortar.jpg'
+			mainImg: 'http://localhost:4000//MSImortar.jpg'
 		},
 		{
 			products: getComponents('GPU'),
-			mainImg: 'src/images/MSImortar.jpg'
+			mainImg: 'http://localhost:4000//MSImortar.jpg'
 		}
 	];
 </script>
 
 <div class="cuerpo">
 	<div class="gradiente_img_cabecera">
-		<img class="img_encabezado" src="/src/images/componentes_cabecera.png" alt="componentes" />
+		<img
+			class="img_encabezado"
+			src="/src/lib/body/images/componentes_cabecera.png"
+			alt="componentes"
+		/>
 	</div>
 	{#each bodyCaroussels as bodyCaroussel}
 		<div class="cuerpo__caroussel">

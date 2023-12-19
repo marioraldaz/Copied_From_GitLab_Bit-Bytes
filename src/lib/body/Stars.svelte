@@ -2,10 +2,10 @@
 	export let nStars;
 	let stars = [];
 	for (let i = 1; i <= nStars; i++) {
-		stars.push('/src/images/star.png');
+		stars.push('/src/lib/body/images/star.png');
 	}
 	for (let i = nStars + 1; i <= 5; i++) {
-		stars.push('/src/images/empty_star.png');
+		stars.push('/src/lib/body/images/empty_star.png');
 	}
 </script>
 

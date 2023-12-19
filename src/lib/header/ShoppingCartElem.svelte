@@ -46,7 +46,7 @@
 			position: relative;
 			height: 50%;
 			width: 50%;
-			background-image: url('src/images/cancelarEntrega.png');
+			background-image: url('src/lib/header/images/cancelarEntrega.png');
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: contain;
