@@ -1,9 +1,8 @@
 <script>
-	import PC_Creator from '/src/stores/PC_Creator.js';
+	import PC_Creator from '/src/stores/products';
 	import shoppingCart from '/src/stores/shoppingCart.js';
 	import Select from '../Select.svelte';
-	import { getComponents, getProducts } from '/src/stores/PC_Creator.js';
-
+	import { getComponents, getProducts } from '/src/stores/products';
 	let productSelected = [];
 	let products = getProducts();
 	let PC = {

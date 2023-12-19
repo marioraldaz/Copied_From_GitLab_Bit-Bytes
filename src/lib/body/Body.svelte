@@ -1,8 +1,7 @@
 <script>
 	import Caroussel from './Caroussel.svelte';
-	import { getComponents, getOffers, setProducts } from '/src/stores/PC_Creator';
-	export let data;
-	setProducts(data.products);
+	import { getComponents, getOffers, getProducts } from '../../stores/products.js';
+
 	let bodyCaroussels = [
 		{
 			products: getOffers(),

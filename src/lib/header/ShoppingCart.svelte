@@ -1,8 +1,8 @@
 <script>
 	import { beforeUpdate, tick } from 'svelte';
-	//import Product from '../body/Product.svelte';
+	import Product from '../body/Product.svelte';
 	import ShoppingCartElem from './ShoppingCartElem.svelte';
-	import { clickOutside } from '../../scripts/clickOutside.js';
+	import { clickOutside } from '../../scripts/clickOutside';
 	import { fade, fly } from 'svelte/transition';
 	import { bounceOut, cubicOut, quintOut } from 'svelte/easing';
 
@@ -43,6 +43,7 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			transition: all 0.3s;
+			cursor: pointer;
 
 			&:hover {
 				width: 75%;

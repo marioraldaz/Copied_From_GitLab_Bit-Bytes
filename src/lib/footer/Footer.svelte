@@ -1,4 +1,5 @@
 <script>
+	import SocialMedia from './SocialMedia.svelte';
 	import Datos from './footerData.json';
 	let footerData = Datos.Elements;
 </script>
@@ -21,19 +22,27 @@
 		</div>
 		<div class="clearfix" />
 	</div>
+	<div class="social-media">
+		<SocialMedia />
+	</div>
 </div>
 
 <style>
 	.footer {
-		padding-top: 7rem;
 		background-color: #fff;
 		width: 100%;
-		margin-top: auto;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
+	.footer > div {
+		margin-top: 5rem;
+	}
 	.footer-content {
-		max-width: 1170px;
-		margin: auto;
+		width: 100%;
 	}
 
 	.footer-row {
@@ -103,6 +112,11 @@
 		padding-left: 8px;
 	}
 
+	.social-media {
+		height: 100%;
+		width: 60%;
+		padding-bottom: 2rem;
+	}
 	@media (max-width: 700px) {
 		.footer-col {
 			width: 100%;

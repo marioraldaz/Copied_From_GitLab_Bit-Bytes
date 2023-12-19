@@ -1,9 +1,9 @@
 <script>
-	import { getComponents } from '/src/stores/PC_Creator';
+	import { getComponents } from '/src/stores/products';
 	import ProductList from '/src/lib/body/ProductList.svelte';
 	export let products;
 	let GBs;
-	products = getComponents(products, 'RAM');
+	products = getComponents('RAM');
 	let prices = [];
 	products.map((product) => prices.push(product.price));
 
@@ -29,7 +29,6 @@
 	}
 
 	$: {
-		console.log(noResultsMessage);
 		products.length == 0 ? (noResultsMessage = true) : (noResultsMessage = false);
 	}
 </script>
@@ -73,21 +72,20 @@
 		</div>
 	</div>
 
-	<div class="cuerpo__products">
-		<ProductList {products} />
-	</div>
+	<ProductList {products} />
 
 	{#if noResultsMessage}
-		<h1 class="cuerpo__noResults">We couldn´t find anything that matches your search.</h1>
+		<h1 class="cuerpo__noResults">We could not find anything that matches your search.</h1>
 	{/if}
 </div>
 
 <style lang="scss">
 	.cuerpo {
-		position: relative;
 		margin-top: 9rem;
-		display: inline;
-
+		display: flex;
+		width: 100%;
+		height: fit-content;
+		flex-direction: column;
 		&__noResults {
 			font-size: 10rem;
 		}
@@ -104,22 +102,23 @@
 		&__filters {
 			background-color: white;
 			width: 100%;
-			height: 14rem;
-			float: left;
-
+			height: 100%;
+			display: flex;
+			flex-direction: row;
 			&__GBs {
-				width: 20%;
-				height: 6rem;
+				display: flex;
+				width: fit-content;
+				height: 100%;
 				margin-left: 2rem;
 				float: left;
-				position: relative;
 
 				&__select {
 					width: 60%;
+					height: 5rem;
 				}
 				&__title {
 					font-size: 4rem;
-					top: 0;
+					width: 40rem;
 				}
 
 				&__select {
@@ -133,7 +132,7 @@
 				width: 70rem;
 				height: 14rem;
 				margin-left: 5rem;
-				float: left;
+				float: right;
 				position: relative;
 
 				&__title {
@@ -249,6 +248,13 @@
 
 		.component__price {
 			font-size: 3.5rem;
+		}
+		.cuerpo__filters {
+			flex-direction: column;
+			&__price {
+				margin-left: 2rem;
+				margin-top: 2rem;
+			}
 		}
 	}
 

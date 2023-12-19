@@ -1,6 +1,7 @@
 <script>
 	import LogIn from './LogIn.svelte';
-	import { clickOutside } from '../../scripts/clickOutside.js';
+	import { clickOutside } from '../../scripts/clickOutside';
+	import userImg from '../../images/usuario.png';
 
 	let visibility = false;
 </script>
@@ -13,7 +14,7 @@
 	}}
 >
 	<label for="user">
-		<img src="/src/images/usuario.png" alt="usuario.png" />
+		<img src={userImg} alt="usuario.png" />
 	</label>
 	<input type="checkbox" id="user" name="" bind:checked={visibility} />
 
@@ -32,6 +33,7 @@
 		animation: hideicon;
 		animation-duration: 5s;
 		animation-timing-function: ease-in;
+
 		img {
 			position: relative;
 			width: 60%;
@@ -40,6 +42,7 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			transition: all 0.3s;
+			cursor: pointer;
 
 			&:hover {
 				width: 75%;
@@ -68,5 +71,10 @@
 	}
 
 	@media screen and (max-width: 600px) {
+		.header__user {
+			width: 5.5rem;
+			height: 5.5rem;
+			margin-top: 6%;
+		}
 	}
 </style>
