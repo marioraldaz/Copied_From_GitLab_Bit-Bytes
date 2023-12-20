@@ -66,12 +66,13 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			width: 60%;
+			width: 35%;
 			height: inherit;
 
 			&__Menu {
 				height: 100%;
-				display: inline-block;
+				width: 100%;
+				display: flex;
 				animation: hideicon;
 				animation-duration: 4s;
 				animation-timing-function: ease-in;

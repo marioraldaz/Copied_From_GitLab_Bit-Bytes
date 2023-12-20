@@ -10,6 +10,7 @@
 
 	function onClick() {
 		getComponents('/products/' + { name });
+		goto(`/products/' + ${name}`);
 		Nav.update((data) => {
 			data.visibility = false;
 			return data;
@@ -23,42 +24,47 @@
 	});
 </script>
 
-<a href="/products/{name}" on:click={onClick}>
-	<div class="elem-container">
-		<img src={logo} id={name} class="image" alt="logo-nav-elem" />
-		<span class="elem-name">{name}</span>
-	</div>
-</a>
+<div class="elem-container">
+	<button class="elem-container__button" on:click={onClick}>
+		<div class="elem-container__button-image">
+			<img src={logo} id={name} class="image" alt="logo-nav-elem" />
+		</div>
+		<div class="elem-container__button-name">{name}</div>
+	</button>
+</div>
 
 <style lang="scss">
-	a {
-		text-decoration: none;
-	}
 	.elem-container {
+		display: flex;
 		margin: 0;
 		padding: 0;
 		width: 100%;
 		border: 3px solid rgb(176, 32, 229);
-		position: relative;
+		&__button {
+			width: 100%;
+			height: 100%;
+			background: none;
+			border: none;
+			display: flex;
+			flex-direction: row;
+			&-image {
+				display: flex;
+				&:hover {
+					display: flex;
+					transform: scale(120%);
+				}
+			}
 
-		.image {
-			display: inline-block;
-
+			&-name {
+				color: white;
+				display: flex;
+			}
 			&:hover {
-				transform: scale(120%);
+				&-name {
+					opacity: 100;
+				}
+				background-color: rgb(176, 32, 229, 0.2);
 			}
-		}
-
-		.elem-name {
-			opacity: 0;
-			display: block;
-			color: white;
-		}
-		&:hover {
-			.elem-name {
-				opacity: 100;
-			}
-			background-color: rgb(176, 32, 229, 0.2);
 		}
 	}
 	@media screen and (min-width: 1100px) {
@@ -71,7 +77,7 @@
 				position: absolute;
 			}
 
-			.elem-name {
+			&-name {
 				position: absolute;
 				right: 0;
 				font-size: 2.5rem;

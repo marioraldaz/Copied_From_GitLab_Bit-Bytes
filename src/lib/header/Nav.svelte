@@ -46,10 +46,10 @@
 		animation-name: slide;
 		animation-duration: 1s;
 		margin-top: 1rem;
-		display: block;
-		position: fixed;
+		display: flex;
+		flex-direction: column;
 		border: 0.1rem solid rgb(94, 176, 208);
-		width: 20%;
+		width: 100%;
 		min-height: 100vh;
 		float: right;
 		z-index: 98;
@@ -61,8 +61,8 @@
 		animation-name: hide;
 		animation-duration: 2s;
 		margin-top: 1rem;
-		display: block;
-		position: fixed;
+		display: flex;
+		flex-direction: column;
 		border: 0.1rem solid rgb(94, 176, 208);
 		width: 20%;
 		min-height: 100vh;

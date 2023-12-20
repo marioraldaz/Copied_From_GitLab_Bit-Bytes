@@ -11,20 +11,30 @@
 	});
 </script>
 
-<input
-	type="checkbox"
-	role="button"
-	aria-label="Display the menu"
-	class="menu"
-	bind:checked={visibility}
-/>
-
-{#if visibility}
-	<NavElem />
-{/if}
+<div class="menu-container">
+	<div class="menu-container__checkbox">
+		<input
+			type="checkbox"
+			role="button"
+			aria-label="Display the menu"
+			class="menu"
+			bind:checked={visibility}
+		/>
+	</div>
+	{#if visibility}
+		<div class="menu-container__nav-container">
+			<NavElem />
+		</div>
+	{/if}
+</div>
 
 <style lang="scss">
 	@use 'sass:math';
+	.menu-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
 	.menu {
 		--s: 6rem; /* control the size */
 		--c: rgb(176, 32, 229); /* the color */
