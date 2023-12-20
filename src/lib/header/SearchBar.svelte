@@ -1,12 +1,12 @@
 <script>
-	import products from '../components/products.json';
-	import Menus from '../../stores/menus.js';
-	import ResultsPage from '../../stores/ResultsPage.js';
-	import { clickOutside } from '../../scripts/clickOutside.js';
+	import { getProducts } from '/src/stores/products';
+	import Menus from '/src/stores/menus.js';
+	import { clickOutside } from '/src/scripts/clickOutside.js';
 	import ImageSearch from './ImageSearch.svelte';
+	import { goto } from '$app/navigation';
 
-	let arrayProducts = products.products;
-	let output = arrayProducts;
+	let products = getProducts();
+	let output = [];
 	let showResults = false;
 	let userInput = '';
 	let hiddenSearchBar = true;
@@ -16,16 +16,16 @@
 
 	function searchProducts(userInput) {
 		output = [];
-		for (var i = 0; i < arrayProducts.length; i++) {
-			if (arrayProducts[i].name.toUpperCase().match(userInput.toUpperCase())) {
-				output.push(arrayProducts[i]);
+		for (var i = 0; i < products.length; i++) {
+			if (products[i].name.toUpperCase().match(userInput.toUpperCase())) {
+				output.push(products[i]);
 			}
 		}
 		//need to save all of them and show only 5.
 
-		for (var i = 0; i < arrayProducts.length; i++) {
-			if (arrayProducts[i].type.toUpperCase().match(userInput.toUpperCase())) {
-				output.push(arrayProducts[i]);
+		for (var i = 0; i < products.length; i++) {
+			if (products[i].type.toUpperCase().match(userInput.toUpperCase())) {
+				output.push(products[i]);
 			}
 		}
 	}
@@ -38,16 +38,16 @@
 		showResults ? searchProducts(userInput) : (output = output);
 	}
 
+	function hideResults() {
+		showResults = false;
+	}
 	function showSearchResults(item) {
 		return function () {
 			hiddenSearchBar = true;
 			showResults = false;
+			goto(`/resultsPage/${userInput}`);
 			Menus.update((data) => {
 				data.active = 'ResultsPage';
-				return data;
-			});
-			ResultsPage.update((data) => {
-				item.length == 0 ? (data.products = output) : (data.products = item);
 				return data;
 			});
 		};
@@ -56,7 +56,7 @@
 
 {#if hiddenSearchBar}
 	<div class="header__searchBar">
-		<ImageSearch on:click={hiddenSearch} urlImage="/src/lib/header/images//search_logo.png" />
+		<ImageSearch on:click={hiddenSearch} urlImage="/src/lib/header/images/search_logo.png" />
 	</div>
 {:else}
 	<div class="container">
@@ -80,11 +80,7 @@
 				<h1 class="container__results__title">Results:</h1>
 				{#each output.slice(0, 5) as item}
 					<button class="container__results__elem" on:click={showSearchResults([item])}>
-						<img
-							src={replaceLeftPartWithSrcImages(item.logo)}
-							class="container__results__elem__img"
-							alt="img"
-						/>
+						<img src={item.logo} class="container__results__elem__img" alt="img" />
 						{item.name}</button
 					>
 				{/each}

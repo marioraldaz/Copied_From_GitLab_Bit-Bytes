@@ -1,29 +1,16 @@
 <script>
-	import ProductList from '../body/ProductList.svelte';
-	import ResultsPage from '../../stores/ResultsPage.js';
-	import { onMount } from 'svelte';
-	let products = [];
+	import ProductList from '/src/lib/body/ProductList.svelte';
+	import { searchProducts } from '/src/stores/products.js';
+	export let search;
+	let products = searchProducts(search);
 	let filteredProducts = products;
 
 	let prices = [];
+	products.map((product) => prices.push(product.price));
 	let lowestPrice = Math.min(...prices);
 	let highestPrice = Math.max(...prices);
 	let minPrice = lowestPrice;
 	let maxPrice = highestPrice;
-	console.log(prices);
-	onMount(() => {
-		return ResultsPage.subscribe((data) => {
-			products = data.products;
-			prices = [];
-			products.map((product) => prices.push(product.price));
-			console.log(products);
-			lowestPrice = Math.min(...prices);
-			highestPrice = Math.max(...prices);
-			minPrice = lowestPrice;
-			maxPrice = highestPrice;
-		});
-	});
-
 	$: {
 		filteredProducts = products;
 		let newProducts = [];
