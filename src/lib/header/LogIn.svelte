@@ -6,14 +6,14 @@
 		<h1>Login</h1>
 		<form action="#" method="post">
 			<div class="text-field">
-				<input type="text" required />
-				<span></span>
-				<span>Username</span>
+				<div class="text-field__text">
+					<input type="text" required placeholder="Username" />
+				</div>
 			</div>
 			<div class="text-field">
-				<input type="password" required />
-				<span></span>
-				<span>Password</span>
+				<div class="text-field__text">
+					<input type="password" required placeholder="Password" />
+				</div>
 			</div>
 			<div class="pass">Forgot Password?</div>
 			<input type="submit" value="Login" on:click|preventDefault />
@@ -24,7 +24,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="scss">
 	.container {
 		height: 100vh;
 		width: 100%;
@@ -56,7 +56,7 @@
 		margin: 3rem 0;
 	}
 
-	.text-field input {
+	.text-field__text {
 		width: 100%;
 		padding: 0 0.5rem;
 		height: 40px;
@@ -66,6 +66,12 @@
 		background: none;
 	}
 
+	input {
+		border: none;
+		&:focus {
+			outline: none;
+		}
+	}
 	.text-field span {
 		position: absolute;
 		top: 50%;
@@ -77,7 +83,7 @@
 		transition: 0.5s;
 	}
 
-	.text-field span::before {
+	.text-field__text::before {
 		content: '';
 		position: absolute;
 		top: 4rem;
@@ -88,14 +94,24 @@
 		transition: 0.5s;
 	}
 
-	.text-field input:focus ~ span,
-	.text-field input:valid ~ span {
-		top: -0.5rem;
-		color: #2691d9;
+	.text-field__text::after {
+		content: '';
+		position: absolute;
+		top: 4rem;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: rgb(38, 145, 217);
+		transition: 0.5s;
 	}
 
-	.text-field input:focus ~ span::before,
-	.text-field input:valid ~ span::before {
+	.text-field__text:focus,
+	.text-field__text:valid {
+		color: #a3d3f2;
+	}
+
+	.text-field input:focus::before,
+	.text-field input:valid::before {
 		width: 100%;
 	}
 
