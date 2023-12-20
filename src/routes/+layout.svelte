@@ -3,6 +3,13 @@
 	import Footer from '/src/lib/footer/Footer.svelte';
 </script>
 
-<Header />
-<slot />
-<Footer />
+<div class="header"><Header /></div>
+<div class="body"><slot /></div>
+<div class="footer"><Footer /></div>
+
+<style lang="scss">
+	.body {
+		flex: 1;
+		display: flex;
+	}
+</style>

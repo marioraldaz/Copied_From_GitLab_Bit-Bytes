@@ -1,10 +1,7 @@
 <script>
-	import User from './User.svelte';
-
-	export let visibility;
 </script>
 
-{#if visibility}
+<div class="container">
 	<div class="center">
 		<h1>Login</h1>
 		<form action="#" method="post">
@@ -25,9 +22,13 @@
 			</div>
 		</form>
 	</div>
-{/if}
+</div>
 
 <style>
+	.container {
+		height: 100vh;
+		width: 100%;
+	}
 	.center {
 		position: absolute;
 		top: 50%;
