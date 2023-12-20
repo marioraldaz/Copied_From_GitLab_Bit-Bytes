@@ -1,29 +1,16 @@
 <script>
-	import ProductList from '../body/ProductList.svelte';
-	import ResultsPage from '../../stores/ResultsPage.js';
-	import { onMount } from 'svelte';
-	let products = [];
+	import ProductList from '/src/lib/body/ProductList.svelte';
+	import { searchProducts } from '/src/stores/products.js';
+	export let search;
+	let products = searchProducts(search);
 	let filteredProducts = products;
 
 	let prices = [];
+	products.map((product) => prices.push(product.price));
 	let lowestPrice = Math.min(...prices);
 	let highestPrice = Math.max(...prices);
 	let minPrice = lowestPrice;
 	let maxPrice = highestPrice;
-	console.log(prices);
-	onMount(() => {
-		return ResultsPage.subscribe((data) => {
-			products = data.products;
-			prices = [];
-			products.map((product) => prices.push(product.price));
-			console.log(products);
-			lowestPrice = Math.min(...prices);
-			highestPrice = Math.max(...prices);
-			minPrice = lowestPrice;
-			maxPrice = highestPrice;
-		});
-	});
-
 	$: {
 		filteredProducts = products;
 		let newProducts = [];
@@ -180,79 +167,5 @@
 
 	input[type='range']::-ms-fill-upper {
 		background-color: #9a905d;
-	}
-
-	@media screen and (max-width: 1600px) {
-		.component__description {
-			font-size: 1.3rem;
-		}
-
-		.component__name {
-			font-size: 2rem;
-		}
-
-		.component__footer {
-			font-size: 2.5rem;
-		}
-
-		.component__price {
-			font-size: 3rem;
-		}
-	}
-
-	@media screen and (max-width: 1100px) {
-		.component__description {
-			font-size: 1.8rem;
-		}
-
-		.component__name {
-			font-size: 3rem;
-		}
-
-		.component__price {
-			font-size: 3.5rem;
-		}
-	}
-
-	@media screen and (max-width: 900px) {
-		.component__description {
-			font-size: 1.3rem;
-		}
-
-		.component__name {
-			font-size: 2rem;
-		}
-
-		.component__price {
-			font-size: 3rem;
-		}
-	}
-
-	@media screen and (max-width: 600px) {
-		.component__description {
-			font-size: 1.8rem;
-		}
-
-		.component__name {
-			font-size: 3rem;
-		}
-
-		.component__price {
-			font-size: 3.5rem;
-		}
-	}
-
-	@media screen and (max-width: 450px) {
-		.component__description {
-			font-size: 1.5rem;
-		}
-
-		.component__name {
-			font-size: 2.3rem;
-		}
-
-		.component__price {
-			font-size: 3rem;
-		}
 	}
 </style>

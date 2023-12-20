@@ -3,25 +3,25 @@
 
 <ul>
 	<li>
-		<a href="#">
+		<a href="/">
 			<i class="fa-brands fa-facebook-f"></i>
 			<span>-Facebook</span>
 		</a>
 	</li>
 	<li>
-		<a href="#">
+		<a href="/">
 			<i class="fa-brands fa-x-twitter"></i>
 			<span>-Twitter</span>
 		</a>
 	</li>
 	<li>
-		<a href="#">
+		<a href="/">
 			<i class="fa-brands fa-tiktok"></i>
 			<span>-Tik Tok</span>
 		</a>
 	</li>
 	<li>
-		<a href="#">
+		<a href="/">
 			<i class="fa-brands fa-instagram"></i>
 			<span>-Instagram</span>
 		</a>

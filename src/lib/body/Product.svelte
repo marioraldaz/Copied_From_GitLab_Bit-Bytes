@@ -5,6 +5,7 @@
 	let clicked = false;
 	function click() {
 		clicked = !clicked;
+		goto(`/${product.name}`);
 	}
 </script>
 
@@ -93,9 +94,9 @@
 			transition: transform 1s;
 
 			&:hover {
-				transform: translate(0, -1rem);
-				height: 35%;
-				width: 45%;
+				transform: translate(0, -2rem);
+				height: 30%;
+				width: 40%;
 				box-shadow: 1rem 0.5rem 3rem 0.5rem rgb(199, 94, 208);
 			}
 		}
@@ -111,11 +112,11 @@
 			margin-right: 2rem;
 			cursor: pointer;
 			background-color: black;
-			transition: transform 5s;
+			transition: transform 1s;
 
 			&:hover {
-				transform: translate(0, -1rem);
-				height: 35%;
+				transform: translate(0, -2rem);
+				height: 30%;
 				width: 45%;
 				box-shadow: 1rem 0.5rem 3rem 0.5rem rgb(199, 94, 208);
 			}

@@ -93,13 +93,6 @@
 		transform: scale(120%);
 	}
 
-	body {
-		margin: 0;
-		min-height: 100vh;
-		display: grid;
-		place-content: center;
-	}
-
 	@media screen and (max-width: 1100px) {
 		.menu {
 			--s: 4rem;

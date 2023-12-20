@@ -51,9 +51,25 @@ export function setProducts(products) {
     return data;
   });
 }
+
+
+export function searchProducts(search) {
+  let output = [];
+
+  productsStore.subscribe((data)=>{
+    for (var i = 0; i < data.products.length; i++) {
+    if (data.products[i].name.toUpperCase().match(search.toUpperCase())) {
+      output.push(data.products[i]);
+    }
+  }
+  });
+  return output;
+}
+
 const productsStore = writable({
   usedComponents,
-  products
+  products,
+  searchProducts
 })
 
 export default productsStore;

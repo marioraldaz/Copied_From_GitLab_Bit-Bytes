@@ -1,7 +1,7 @@
 <script>
 	import Menu from './Menu.svelte';
 	import ShoppingCart from './ShoppingCart.svelte';
-	import Usuario from './User.svelte';
+	import User from './User.svelte';
 	import SearchBar from './SearchBar.svelte';
 	import Menus from '../../stores/menus.js';
 	import { onMount } from 'svelte';
@@ -39,7 +39,9 @@
 
 	<div class="header__right">
 		<ShoppingCart />
-		<Usuario />
+		<a href="/login">
+			<User />
+		</a>
 		<SearchBar />
 	</div>
 </div>

@@ -96,9 +96,6 @@
 			margin-top: 2rem;
 		}
 
-		&__products {
-			height: 80%;
-		}
 		&__filters {
 			background-color: white;
 			width: 100%;
@@ -217,86 +214,5 @@
 
 	input[type='range']::-ms-fill-upper {
 		background-color: #9a905d;
-	}
-
-	@media screen and (max-width: 1600px) {
-		.component__description {
-			font-size: 1.3rem;
-		}
-
-		.component__name {
-			font-size: 2rem;
-		}
-
-		.component__footer {
-			font-size: 2.5rem;
-		}
-
-		.component__price {
-			font-size: 3rem;
-		}
-	}
-
-	@media screen and (max-width: 1100px) {
-		.component__description {
-			font-size: 1.8rem;
-		}
-
-		.component__name {
-			font-size: 3rem;
-		}
-
-		.component__price {
-			font-size: 3.5rem;
-		}
-		.cuerpo__filters {
-			flex-direction: column;
-			&__price {
-				margin-left: 2rem;
-				margin-top: 2rem;
-			}
-		}
-	}
-
-	@media screen and (max-width: 900px) {
-		.component__description {
-			font-size: 1.3rem;
-		}
-
-		.component__name {
-			font-size: 2rem;
-		}
-
-		.component__price {
-			font-size: 3rem;
-		}
-	}
-
-	@media screen and (max-width: 600px) {
-		.component__description {
-			font-size: 1.8rem;
-		}
-
-		.component__name {
-			font-size: 3rem;
-		}
-
-		.component__price {
-			font-size: 3.5rem;
-		}
-	}
-
-	@media screen and (max-width: 450px) {
-		.component__description {
-			font-size: 1.5rem;
-		}
-
-		.component__name {
-			font-size: 2.3rem;
-		}
-
-		.component__price {
-			font-size: 3rem;
-		}
 	}
 </style>
