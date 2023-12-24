@@ -32,9 +32,9 @@
 				<a href="/#" on:click={onClick}>Home</a>
 			</div>
 		{/if}
-		<div class="header__logo">
-			<a href="/"><img src="/src/lib/header/images/logo.png" alt="logo.png" /></a>
-		</div>
+	</div>
+	<div class="header__logo">
+		<a href="/"><img src="/src/lib/header/images/logo.png" alt="logo.png" /></a>
 	</div>
 
 	<div class="header__right">
@@ -50,6 +50,7 @@
 	.header {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		position: fixed;
 		height: 8.2rem;
 		width: 100%;
@@ -85,8 +86,10 @@
 			flex: 1;
 		}
 		&__logo {
+			display:flex;
 			height: 8rem;
-			align-self: flex-start;
+			position: relative;
+			left:10%;
 		}
 		&__logo img {
 			height: 100%;

@@ -5,16 +5,15 @@
 	import Menus from '../../stores/menus.js';
 	import Nav from '../../stores/nav.js';
 	import { getComponents } from '../../stores/products.js';
-
+	import { goto } from '$app/navigation';
 	let menus = [];
 
 	function onClick() {
-		getComponents('/products/' + { name });
-		goto(`/products/' + ${name}`);
 		Nav.update((data) => {
 			data.visibility = false;
 			return data;
 		});
+		goto(`/products/${name}`);
 	}
 
 	onMount(() => {
