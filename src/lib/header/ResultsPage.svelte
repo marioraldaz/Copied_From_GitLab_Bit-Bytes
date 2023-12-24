@@ -3,6 +3,7 @@
 	import { searchProducts } from '/src/stores/products.js';
 	export let search;
 	let products = searchProducts(search);
+	console.log("<<<",products);
 	let filteredProducts = products;
 
 	let prices = [];
@@ -20,6 +21,7 @@
 			}
 		}
 		filteredProducts = newProducts;
+		console.log(filteredProducts);
 	}
 </script>
 

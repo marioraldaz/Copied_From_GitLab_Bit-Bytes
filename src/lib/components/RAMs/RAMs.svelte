@@ -99,7 +99,7 @@
 		&__filters {
 			background-color: white;
 			width: 100%;
-			height: 100%;
+			height: 14rem;
 			display: flex;
 			flex-direction: row;
 			&__GBs {

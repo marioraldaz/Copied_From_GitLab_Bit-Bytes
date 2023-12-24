@@ -46,12 +46,13 @@
 		animation-name: slide;
 		animation-duration: 1s;
 		margin-top: 1rem;
+		overflow:scroll;
+		height: 50rem;
 		display: flex;
 		flex-direction: column;
 		border: 0.1rem solid rgb(94, 176, 208);
 		width: 100%;
 		min-height: 100vh;
-		float: right;
 		z-index: 98;
 		background: linear-gradient(60deg, rgb(176, 32, 229) 25%, rgb(94, 176, 208));
 		transition: 0.4s;

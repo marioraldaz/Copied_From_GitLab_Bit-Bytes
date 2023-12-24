@@ -63,18 +63,18 @@
 		{/each}
 	</div>
 	<h1 class="container__section__price">Total: {totalPrice}$</h1>
-	<button class="container__buy" on:click={buy}>Add to shopping cart</button>
+	<button class="container__buy" on:click={buy}><span class="container__buy__text">Add to shopping cart</span></button>
 </div>
 
 <style lang="scss">
 	.container {
-		position: relative;
 		margin-top: 9rem;
-		text-align: center;
-		font-size: 5rem;
-		display: block;
+		align-items: center;
+		font-size: 3rem;
 		margin-bottom: 10rem;
 		margin-left: 5rem;
+		display: flex;
+		flex-direction: column;
 		&__title {
 			margin-bottom: 5rem;
 		}
@@ -90,31 +90,30 @@
 				font-size: 2rem;
 
 				&--title {
-					float: left;
-					font-size: 3rem;
+					font-size: 2rem;
 				}
 			}
 		}
 		&__buy {
-			display: block;
-			position: relative;
-			top: 50%;
-			left: 50%;
+			display: flex;
 			transform: translate(-50%, 0);
 			font-size: 3rem;
-			height: 25%;
+			height: 35%;
 			width: 40%;
 			color: rgb(255, 255, 255);
 			border-radius: 2rem;
 			border: none;
-			float: left;
 			cursor: pointer;
 			background-color: black;
 			transition: transform 1s;
-
+			margin-left: 40%;
+			text-align: center;
+			&__text{
+				margin-left: 5rem;
+			}
 			&:hover {
 				transform: translate(-48%, -25%);
-				height: 35%;
+				height: 40%;
 				box-shadow: 1rem 1rem 3rem 1rem rgb(94, 176, 208);
 			}
 		}

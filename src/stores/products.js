@@ -55,8 +55,11 @@ export function setProducts(products) {
 
 export function searchProducts(search) {
   let output = [];
-
   productsStore.subscribe((data)=>{
+    if (search=="showAll") {
+      output=data.products;
+      return output;
+    }
     for (var i = 0; i < data.products.length; i++) {
     if (data.products[i].name.toUpperCase().match(search.toUpperCase())) {
       output.push(data.products[i]);

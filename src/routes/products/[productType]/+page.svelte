@@ -29,7 +29,7 @@
 			component: GPUs
 		},
 		{
-			type: 'MotherBoards',
+			type: 'Motherboards',
 			component: MotherBoards
 		},
 		{

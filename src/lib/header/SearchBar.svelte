@@ -45,7 +45,8 @@
 		return function () {
 			hiddenSearchBar = true;
 			showResults = false;
-			goto(`/resultsPage/${userInput}`);
+		
+			userInput.length==0 ? goto(`/resultsPage/showAll`): goto(`/resultsPage/${userInput}`);
 			Menus.update((data) => {
 				data.active = 'ResultsPage';
 				return data;

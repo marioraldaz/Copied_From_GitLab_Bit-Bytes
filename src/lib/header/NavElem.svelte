@@ -23,7 +23,8 @@
 	});
 </script>
 
-<div class="elem-container">
+<li>
+	<div class="elem-container">
 	<button class="elem-container__button" on:click={onClick}>
 		<div class="elem-container__button-image">
 			<img src={logo} id={name} class="elem-container__button-image-img" alt="logo-nav-elem" />
@@ -31,6 +32,8 @@
 		<div class="elem-container__button-name">{name}</div>
 	</button>
 </div>
+</li>
+
 
 <style lang="scss">
 	.elem-container {
