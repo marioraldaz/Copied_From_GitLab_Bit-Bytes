@@ -1,5 +1,27 @@
 <script>
+    export let profiles=[];
+    let username="";
+    let password="";
+    let repeatPassword="";
+    function signUp(username, password){
+        if(username.length<6){
+            return newError("Username must be at least 6 characters");
+        } else if(username.length>12){
+            return newError("Username must be at least 12 characters");
+        } else if(password!=repeatPassword){
+            return newError("Passwords do not match");
+        } else if(password.length<6){
+            return newError("Password must be at least 6 characters");
+        } else if(password.length>12){
+            return newError("Password must be at least 12 characters");
+        }
+        let profile=profiles.find((profile)=>profile.username==username);
+        if(!profile){
+         return newError("Username "+username+" is taken");   
+        }
 
+        saveNewProfile(profile); //From store or from here?
+    }
 </script>
 
 <div class="container">
@@ -21,10 +43,9 @@
 					<input type="password" required name="repeatPassword" placeholder="Repeat Password" />
 				</div>
 			</div>
-			<div class="pass">Forgot Password?</div>
-			<input type="submit" value="Login" on:click|preventDefault />
+			<input type="submit" value="Login" on:click={register} />
 			<div class="singup_link">
-				Not a member? <a href="/signUp">Sign Up</a>
+				Already a member? <a href="/signUp">Sign In</a>
 			</div>
 		</form>
 	</div>

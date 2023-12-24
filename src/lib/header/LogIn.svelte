@@ -1,4 +1,25 @@
 <script>
+	export let profiles=[];
+	let username="";
+	let password="";
+	let profile;
+	function signIn(username,password) {
+		profile==profiles.find((profile) => profile.username == username && profile.password == password);
+		if(!profile){
+			return showError("Username or password are incorrect");
+		} else{
+			return greet(profile);
+		}
+	}
+
+	function greet(profile) {
+		return "<div class='greetMessage' >Hello "+profile.username+" !</div>";
+
+	}
+	function showError(message) {
+		return "<div class='errorMessage' >"+message+"</div>";
+	}
+	
 </script>
 
 <div class="container">
@@ -7,16 +28,16 @@
 		<form action="#" method="post">
 			<div class="text-field">
 				<div class="text-field__text">
-					<input type="text" required placeholder="Username" />
+					<input type="text" name="username" value={username} required placeholder="Username" />
 				</div>
 			</div>
 			<div class="text-field">
 				<div class="text-field__text">
-					<input type="password" required placeholder="Password" />
+					<input type="password" name="password" value={password} required placeholder="Password" />
 				</div>
 			</div>
 			<div class="pass">Forgot Password?</div>
-			<input type="submit" value="Login" on:click|preventDefault />
+			<input type="submit" value="Login" on:click={signIn(username,password)} />
 			<div class="singup_link">
 				Not a member? <a href="/signUp">Sign Up</a>
 			</div>
