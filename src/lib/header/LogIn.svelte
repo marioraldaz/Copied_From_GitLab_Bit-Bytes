@@ -18,7 +18,7 @@
 			<div class="pass">Forgot Password?</div>
 			<input type="submit" value="Login" on:click|preventDefault />
 			<div class="singup_link">
-				Not a member? <a href="/">Sign Up</a>
+				Not a member? <a href="/signUp">Sign Up</a>
 			</div>
 		</form>
 	</div>
