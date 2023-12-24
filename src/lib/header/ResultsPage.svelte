@@ -28,8 +28,7 @@
 		<div class="container__filters__price">
 			<h1 class="container__filters__price__title">Price Range</h1>
 			<div class="container__filters__price__bar">
-				<div class="container__filters__price__bar
-				__min">
+				<div class="container__filters__price__bar__min">
 					MIN:<input
 						type="number"
 						class="container__filters__price__bar__min__numberbox"
@@ -73,6 +72,7 @@
 			height: 15rem;
 			margin-left: 4rem;
 			background-color: white;
+			display: inline-block;
 			height: 14rem;
 			&__price {
 				padding: 2rem;
@@ -88,11 +88,11 @@
 					font-size: 2rem;
 					display: flex;
 					
-				}
+				}	
 				&__bar{
-					width:30rem;
-					display: flex;
-					flex-direction: row;
+					position: relative;
+					left:13%;	
+					top:-40%;
 					&__min {
 						cursor: pointer;
 						font-size: 3rem;
@@ -100,33 +100,24 @@
 						top: 40%;
 						left: 0;
 						height: 50%;
-						&__numberbox {
-							height: 50%;
-							transform: translateY(-0.4rem);
-						}
+						width: fit-content;
 					}
 
-					&__max {
-						cursor: pointer;
-						font-size: 3rem;
-						position: absolute;
-						top: 40%;
-						left: 36.3%;
-						height: 50%;
-
-						&__numberbox {
-							width: 7rem;
-							height: 50%;
-							transform: translateY(-0.4rem);
-						}
-					}
-				}
+          &__max {
+              cursor: pointer;
+              font-size: 3rem;
+              position: absolute;
+              top: 40%;
+              left: 36.3%;
+              height: 50%;
+            }
+		}
 			}
 		}
 		&__title {
 			font-size: 5rem;
 			text-align: left;
-			height: 20rem;
+			height: 10rem;
 			width: 60rem;
 			margin-left: 4rem;
 		}
