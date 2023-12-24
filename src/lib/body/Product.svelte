@@ -193,7 +193,7 @@
 			position: absolute;
 			z-index: 150;
 			left: 50%;
-			top: 65%;
+			top: 68%;
 			&__stars {
 				margin-top: 0.5rem;
 				width: 400%;

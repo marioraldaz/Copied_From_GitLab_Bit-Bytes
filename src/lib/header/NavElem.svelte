@@ -26,7 +26,7 @@
 <div class="elem-container">
 	<button class="elem-container__button" on:click={onClick}>
 		<div class="elem-container__button-image">
-			<img src={logo} id={name} class="image" alt="logo-nav-elem" />
+			<img src={logo} id={name} class="elem-container__button-image-img" alt="logo-nav-elem" />
 		</div>
 		<div class="elem-container__button-name">{name}</div>
 	</button>
@@ -51,12 +51,18 @@
 				&:hover {
 					display: flex;
 					transform: scale(120%);
+				};
+				&-img{
+					height:10rem;	
 				}
 			}
 
 			&-name {
 				color: white;
 				display: flex;
+				font-size: 2rem;
+				margin-left:2rem;
+
 			}
 			&:hover {
 				&-name {
