@@ -27,25 +27,28 @@
 	<div class="container__filters">
 		<div class="container__filters__price">
 			<h1 class="container__filters__price__title">Price Range</h1>
-			<div class="container__filters__price__min">
-				MIN:<input
-					type="number"
-					class="container__filters__price__min__numberbox"
-					value={minPrice}
-					min={lowestPrice}
-					max={highestPrice}
-				/>
-				<input type="range" min={lowestPrice} max={highestPrice} bind:value={minPrice} />
-			</div>
-			<div class="container__filters__price__max">
-				<input type="range" max={highestPrice} min={lowestPrice} bind:value={maxPrice} />
-				MAX:<input
-					type="number"
-					class="container__filters__price__max__numberbox"
-					value={maxPrice}
-					min={lowestPrice}
-					max={highestPrice}
-				/>
+			<div class="container__filters__price__bar">
+				<div class="container__filters__price__bar
+				__min">
+					MIN:<input
+						type="number"
+						class="container__filters__price__bar__min__numberbox"
+						value={minPrice}
+						min={lowestPrice}
+						max={highestPrice}
+					/>
+					<input type="range" min={lowestPrice} max={highestPrice} bind:value={minPrice} />
+				</div>
+				<div class="container__filters__price__bar__max">
+					<input type="range" max={highestPrice} min={lowestPrice} bind:value={maxPrice} />
+					MAX:<input
+						type="number"
+						class="container__filters__price__bar__max__numberbox"
+						value={maxPrice}
+						min={lowestPrice}
+						max={highestPrice}
+					/>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -63,16 +66,19 @@
 	.container {
 		width: 100%;
 		margin-top: 10rem;
+		display: flex;
+		flex-direction: column;
 		&__filters {
 			width: 80%;
-			height: 10rem;
+			height: 15rem;
 			margin-left: 4rem;
 			background-color: white;
+			height: 14rem;
 			&__price {
 				padding: 2rem;
 				width: 70rem;
 				font-size: 2rem;
-				height: 24rem;
+				height: 14rem;
 				float: left;
 				position: relative;
 
@@ -80,37 +86,39 @@
 					background-color: white;
 					width: 10rem;
 					font-size: 2rem;
-					float: left;
+					display: flex;
+					
 				}
-
-				&__min {
-					cursor: pointer;
-					font-size: 3rem;
-					position: absolute;
-					top: 40%;
-					left: 0;
-					height: 50%;
-
-					&__numberbox {
-						width: 7rem;
+				&__bar{
+					width:30rem;
+					display: flex;
+					flex-direction: row;
+					&__min {
+						cursor: pointer;
+						font-size: 3rem;
+						position: absolute;
+						top: 40%;
+						left: 0;
 						height: 50%;
-						transform: translateY(-0.4rem);
+						&__numberbox {
+							height: 50%;
+							transform: translateY(-0.4rem);
+						}
 					}
-				}
 
-				&__max {
-					cursor: pointer;
-
-					font-size: 3rem;
-					position: absolute;
-					top: 40%;
-					left: 36.3%;
-					height: 50%;
-
-					&__numberbox {
-						width: 7rem;
+					&__max {
+						cursor: pointer;
+						font-size: 3rem;
+						position: absolute;
+						top: 40%;
+						left: 36.3%;
 						height: 50%;
-						transform: translateY(-0.4rem);
+
+						&__numberbox {
+							width: 7rem;
+							height: 50%;
+							transform: translateY(-0.4rem);
+						}
 					}
 				}
 			}

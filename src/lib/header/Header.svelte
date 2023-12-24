@@ -49,6 +49,7 @@
 <style lang="scss">
 	.header {
 		display: flex;
+		height:10rem;
 		justify-content: space-between;
 		align-items: center;
 		position: fixed;

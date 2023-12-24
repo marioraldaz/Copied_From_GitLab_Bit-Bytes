@@ -11,5 +11,14 @@
 	.body {
 		flex: 1;
 		display: flex;
+		flex-direction: column;
+
+	}
+	.header{
+		display: flex;
+	}
+
+	.body{
+		display: flex;
 	}
 </style>
