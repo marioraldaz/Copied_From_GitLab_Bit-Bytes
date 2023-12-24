@@ -44,10 +44,10 @@
 <style lang="scss">
 	.menu-nav {
 		animation-name: slide;
-		animation-duration: 1s;
+		animation-duration: 2s;
 		margin-top: 1rem;
 		overflow:scroll;
-		height: 50rem;
+		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		border: 0.1rem solid rgb(94, 176, 208);
@@ -56,6 +56,8 @@
 		z-index: 98;
 		background: linear-gradient(60deg, rgb(176, 32, 229) 25%, rgb(94, 176, 208));
 		transition: 0.4s;
+		padding-bottom: 20rem;
+		flex-grow: 1;
 	}
 
 	.hide {
@@ -67,7 +69,6 @@
 		border: 0.1rem solid rgb(94, 176, 208);
 		width: 20%;
 		min-height: 100vh;
-		float: right;
 		z-index: 98;
 		background: linear-gradient(60deg, rgb(176, 32, 229) 25%, rgb(94, 176, 208));
 		transition: 0.4s;
@@ -75,20 +76,22 @@
 
 	@keyframes slide {
 		from {
-			left: -30%;
+			transform: translateX(-50%);
 		}
+
 		to {
-			left: 0;
-		}
+			transform: translateX(0%);
+  		}
 	}
 
 	@keyframes hide {
 		from {
-			left: 0;
+			transform: translateX(0%);
 		}
+
 		to {
-			left: -30%;
-		}
+			transform: translateX(-50%);
+  		}
 	}
 	@media screen and (max-width: 1100px) {
 		.menu-nav {
