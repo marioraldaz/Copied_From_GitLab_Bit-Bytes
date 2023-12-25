@@ -1,8 +1,7 @@
 <script>
 	import { beforeUpdate, tick } from 'svelte';
-	import Product from '../body/Product.svelte';
 	import ShoppingCartElem from './ShoppingCartElem.svelte';
-	import { clickOutside } from '../../scripts/clickOutside';
+	import { clickOutside } from '../../../scripts/clickOutside';
 	import { fade, fly } from 'svelte/transition';
 	import { bounceOut, cubicOut, quintOut } from 'svelte/easing';
 

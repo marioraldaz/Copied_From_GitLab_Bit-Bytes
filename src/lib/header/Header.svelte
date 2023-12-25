@@ -1,9 +1,10 @@
 <script>
-	import Menu from './Menu.svelte';
-	import ShoppingCart from './ShoppingCart.svelte';
-	import User from './User.svelte';
+	import Menu from './menu/Menu.svelte';
+	import ShoppingCart from './cart/ShoppingCart.svelte';
+	import User from './profile/User.svelte';
 	import SearchBar from './SearchBar.svelte';
 	import Menus from '../../stores/menus.js';
+	import CreatorButton from './CreatorButton.svelte';
 	import { onMount } from 'svelte';
 	let active = '';
 
@@ -25,6 +26,7 @@
 	<div class="header__left">
 		<div class="header__left__Menu">
 			<Menu />
+			<CreatorButton/>
 		</div>
 
 		{#if active != 'Body'}

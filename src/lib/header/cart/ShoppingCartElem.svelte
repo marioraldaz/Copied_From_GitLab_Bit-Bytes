@@ -1,6 +1,6 @@
 <script>
 	// @ts-nocheck
-	import shoppingCart from '../../stores/shoppingCart';
+	import shoppingCart from '/src/stores/shoppingCart';
 	import ShoppingCartProduct from './ShoppingCartProduct.svelte';
 
 	export let visibility;

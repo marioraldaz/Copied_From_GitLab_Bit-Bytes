@@ -2,9 +2,9 @@
 	import { onMount } from 'svelte';
 	export let name = 'name';
 	export let logo = 'logo_default';
-	import Menus from '../../stores/menus.js';
-	import Nav from '../../stores/nav.js';
-	import { getComponents } from '../../stores/products.js';
+	import Menus from '../../../stores/menus.js';
+	import Nav from '../../../stores/nav.js';
+	import { getComponents } from '../../../stores/products.js';
 	import { goto } from '$app/navigation';
 	let menus = [];
 

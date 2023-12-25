@@ -1,9 +1,9 @@
 <script>
 	import NavElem from './NavElem.svelte';
-	import Menus from '../../stores/menus.js';
+	import Menus from '../../../stores/menus.js';
 	import { onMount } from 'svelte';
-	import { clickOutside } from '../../scripts/clickOutside.js';
-	import Nav from '../../stores/nav.js';
+	import { clickOutside } from '../../../scripts/clickOutside.js';
+	import Nav from '../../../stores/nav.js';
 	let visibility = false;
 	let menus = [];
 	let hideAnimation = false;
@@ -51,7 +51,7 @@
 		display: flex;
 		flex-direction: column;
 		border: 0.1rem solid rgb(94, 176, 208);
-		width: 100%;
+		width: 150%;
 		min-height: 100vh;
 		z-index: 98;
 		background: linear-gradient(60deg, rgb(176, 32, 229) 25%, rgb(94, 176, 208));

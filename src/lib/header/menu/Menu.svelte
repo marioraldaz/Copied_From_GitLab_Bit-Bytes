@@ -1,6 +1,6 @@
 <script>
 	import NavElem from './Nav.svelte';
-	import Nav from '../../stores/nav.js';
+	import Nav from '../../../stores/nav.js';
 	import { onMount } from 'svelte';
 	export let visibility = false;
 
@@ -33,7 +33,7 @@
 	.menu-container {
 		display: flex;
 		flex-direction: column;
-		width: 100%;
+		width: 50%;
 	}
 	.menu {
 		--s: 6rem; /* control the size */
