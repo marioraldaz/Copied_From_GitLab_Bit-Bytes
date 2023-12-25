@@ -192,7 +192,7 @@
 			&__inactive1 {
 				display: flex;
 				&.openAnimation {
-					animation-duration: 3s;
+					animation-duration: 4s;
 					animation-name: slidein2;
 				}
 				pointer-events: none;
@@ -229,7 +229,7 @@
 
 		&__active {
 			&.openAnimation {
-				animation-duration: 4s;
+				animation-duration: 5s;
 				animation-name: slidein3;
 			}
 			&.moveRight {
@@ -255,13 +255,13 @@
 
 		&__inactive2 {
 			&.openAnimation {
-				animation-duration: 5s;
+				animation-duration: 6s;
 				animation-name: slidein4;
 			}
 			&.moveRight {
 				animation-duration: 2s;
 				animation-name: moveInactive2Right;
-				animation-timing-function: ease-in-out;
+				animation-timing-function: ease-out;
 			}
 			display:flex;
 			width: 25rem;
@@ -311,47 +311,31 @@
 	}
 
 	@keyframes slidein2 {
-		0% {
-			opacity: 0;
+		from {
+			margin-left: 90%;
 		}
 
-		35% {
-			margin-left: 100%;
-		}
-
-		100% {
-			position: absolute;
-			left: 17%;
-			top: 0%;
+		to {
+			left: 0%;
 		}
 	}
 
 	@keyframes slidein3 {
-		0% {
-			opacity: 0;
+		from {
+			margin-left: 90%;
 		}
 
-		35% {
-			margin-left: 100%;
-		}
-
-		100% {
-			left: 30%;
+		to {
+			left: 0%;
 		}
 	}
 	@keyframes slidein4 {
-		0% {
-			opacity: 0;
+		from {
+			margin-left: 90%;
 		}
 
-		35% {
-			margin-left: 100%;
-		}
-
-		100% {
-			position: absolute;
-			left: 50%;
-			top: 0%;
+		to {
+			left: 0%;
 		}
 	}
 	@keyframes buttonAnimation {
@@ -376,7 +360,6 @@
 			border: none;
 			width: 30rem;
 			height: 30rem;
-			position: absolute;
 			left: 50%;
 			top: 5%;
 			opacity: 30%;
@@ -446,6 +429,7 @@
 
 	@media screen and (max-width:1100px){
 		.container__caroussel__inactive1,.container__caroussel__inactive2{
+			display: none;
 		}
 	}
 </style>
