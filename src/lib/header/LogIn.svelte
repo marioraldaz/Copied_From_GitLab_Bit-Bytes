@@ -1,19 +1,37 @@
 <script>
+	import { page } from '$app/stores';
+	import { enhance } from '$app/forms';
 	export let profiles=[];
+	export let form;
 	let username="";
 	let password="";
 	let profile;
-	function signIn(username,password) {
-		profile==profiles.find((profile) => profile.username == username && profile.password == password);
+	const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
+
+	function trySignIn() {
+		profile=profiles.find((profile) => profile.username == username && profile.password == password);
 		if(!profile){
+			console.log(username)
 			return showError("Username or password are incorrect");
 		} else{
-			return greet(profile);
+			signIn(username,password);
 		}
 	}
+	
+	function signIn(username,password){
+		console.log(username,password);
+		cookies.set("currentProfile",{"username":username, "password":password}, {
+			httpOnly: true,
+			sameSite: 'strict',
+			secure: false,
+			path: '/',
+			maxAge: 60 * 60 * 24 * 7
+		});
+		return greet(username);
+	}
 
-	function greet(profile) {
-		return "<div class='greetMessage' >Hello "+profile.username+" !</div>";
+	function greet(username) {
+		return "<div class='greetMessage' >Hello "+username+" !</div>";
 
 	}
 	function showError(message) {
@@ -21,23 +39,25 @@
 	}
 	
 </script>
-
+{#if form?.success}
+	<p style="color: green;">You are now logged in!</p>
+{/if}
 <div class="container">
 	<div class="center">
 		<h1>Login</h1>
-		<form action="#" method="post">
+		<form action="" method="post" use:enhance>
 			<div class="text-field">
 				<div class="text-field__text">
-					<input type="text" name="username" value={username} required placeholder="Username" />
+					<input type="text" name="username" bind:value={username} required placeholder="Username" />
 				</div>
 			</div>
 			<div class="text-field">
 				<div class="text-field__text">
-					<input type="password" name="password" value={password} required placeholder="Password" />
+					<input type="password" name="password" bind:value={password} required placeholder="Password" />
 				</div>
 			</div>
 			<div class="pass">Forgot Password?</div>
-			<input type="submit" value="Login" on:click={signIn(username,password)} />
+			<button class="logIn-button" on:click={trySignIn}>Log In </button>
 			<div class="singup_link">
 				Not a member? <a href="/signUp">Sign Up</a>
 			</div>
@@ -148,7 +168,7 @@
 		color: rgb(38, 145, 217);
 	}
 
-	input[type='submit'] {
+	.logIn-button {
 		width: 100%;
 		height: 5rem;
 		border: 1px solid;
@@ -162,7 +182,7 @@
 		transition: 0.5s ease;
 	}
 
-	input[type='submit']:hover {
+	.logIn-button:hover {
 		transition: 0.5s ease;
 		transform: translateY(-1rem);
 	}
