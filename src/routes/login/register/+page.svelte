@@ -1,4 +1,6 @@
 <script>
-    import '/src/lib/header/profile/Register.svelte';
+    import Register from '/src/lib/header/profile/Register.svelte';
     
 </script>
+
+<Register/>

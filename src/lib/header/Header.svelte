@@ -1,25 +1,12 @@
 <script>
+	import { page } from '$app/stores';
 	import Menu from './menu/Menu.svelte';
 	import ShoppingCart from './cart/ShoppingCart.svelte';
 	import User from './profile/User.svelte';
 	import SearchBar from './SearchBar.svelte';
-	import Menus from '../../stores/menus.js';
 	import CreatorButton from './CreatorButton.svelte';
-	import { onMount } from 'svelte';
 	let active = '';
 
-	onMount(() => {
-		return Menus.subscribe((data) => {
-			active = data.active;
-		});
-	});
-
-	function onClick() {
-		return Menus.update((data) => {
-			data.active = 'Body';
-			return data;
-		});
-	}
 </script>
 
 <div class="header">
@@ -28,18 +15,13 @@
 			<Menu />
 			<CreatorButton/>
 		</div>
-
-		{#if active != 'Body'}
-			<div class="header__home">
-				<a href="/#" on:click={onClick}>Home</a>
-			</div>
-		{/if}
 	</div>
 	<div class="header__logo">
 		<a href="/"><img src="/src/lib/header/images/logo.png" alt="logo.png" /></a>
 	</div>
 
 	<div class="header__right">
+		{$page.data.username}
 		<ShoppingCart />
 		<a href="/login">
 			<User />

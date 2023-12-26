@@ -19,7 +19,6 @@
 	}
 	
 	function signIn(username,password){
-		console.log(username,password);
 		cookies.set("currentProfile",{"username":username, "password":password}, {
 			httpOnly: true,
 			sameSite: 'strict',
