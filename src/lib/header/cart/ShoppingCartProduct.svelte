@@ -66,7 +66,7 @@
 				width: 2.5rem;
 				border: none;
 				background-color: transparent;
-				background-image: url('./images/anadir.png');
+				background-image: url('/src/lib/header/images/anadir.png');
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
@@ -78,7 +78,7 @@
 				border: none;
 				margin-right: 0.5rem;
 				background-color: transparent;
-				background-image: url('./images/menos.png');
+				background-image: url('/src/lib/header/images/menos.png');
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;

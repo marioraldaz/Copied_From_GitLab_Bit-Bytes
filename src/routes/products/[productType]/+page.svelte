@@ -6,7 +6,7 @@
 	import CPUs from '/src/lib/components/CPUs/CPUs.svelte';
 	import GPUs from '/src/lib/components/GPUs/GPUs.svelte';
 	import PC_Creator from '/src/lib/components/PC_Creator/PC_Creator.svelte';
-	import ResultsPage from '/src/lib/header/ResultsPage.svelte';
+	import ResultsPage from '/src/lib/body/ResultsPage.svelte';
 
 	let productType = $page.params.productType;
 	$: productType = $page.params.productType;

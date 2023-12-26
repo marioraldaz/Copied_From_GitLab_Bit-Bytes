@@ -1,5 +1,5 @@
 <script>
-	import LogIn from '/src/lib/header/LogIn.svelte';
+	import LogIn from '/src/lib/header/profile/LogIn.svelte';
 	export let data;
 	export let form;
 	
