@@ -65,7 +65,6 @@
 		movingRight = false;
 	  }, 2000);
 	}
-	console.log(products);
   </script>
   
   <div class="container">
@@ -444,6 +443,25 @@
 		opacity: 30%;
 		z-index: 5;
 	  }
+	}
+
+	@media screen and (max-width: 1100px) {
+		.container__caroussel__inactive1,.container__caroussel__inactive2{
+			display: none;
+			animation:none;
+		}
+		 
+		*.openAnimation, *.moveLeft, *.moveRight{
+			animation-duration: 0s;
+		}
+		.container__caroussel__nextButton{
+			left:65%;
+		}
+
+		.container__caroussel__previousButton{
+			left:22.5%;
+		}
+
 	}
   </style>
   
