@@ -17,7 +17,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		padding: 1rem;
-		margin-left: 6rem;
 		width: 100%;
 		flex-direction: row;
 		min-height: 0;
@@ -25,8 +24,10 @@
 
 	.column {
 		display: flex;
-		width: 35rem;
-		height: 45.5rem;
+		align-items: center; /* Center the items vertically */
+
+		width: 30rem;
+		height: 35rem;
 		margin: 1rem;
 	}
 

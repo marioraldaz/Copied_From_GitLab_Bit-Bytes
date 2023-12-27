@@ -4,16 +4,15 @@
 	export let logo = 'logo_default';
 	import Menus from '../../../stores/menus.js';
 	import Nav from '../../../stores/nav.js';
-	import { getComponents } from '../../../stores/products.js';
 	import { goto } from '$app/navigation';
-	let menus = [];
 
-	function onClick() {
+	let menus = [];
+	 function onClick() {
+		goto(`/products/${name}`);
 		Nav.update((data) => {
 			data.visibility = false;
 			return data;
 		});
-		goto(`/products/${name}`);
 	}
 
 	onMount(() => {
@@ -25,15 +24,14 @@
 
 <li>
 	<div class="elem-container">
-	<button class="elem-container__button" on:click={onClick}>
-		<div class="elem-container__button-image">
-			<img src={logo} id={name} class="elem-container__button-image-img" alt="logo-nav-elem" />
-		</div>
-		<div class="elem-container__button-name">{name}</div>
-	</button>
-</div>
+		<button class="elem-container__button" on:click={onClick}>
+			<div class="elem-container__button-image">
+				<img src={logo} id={name} class="elem-container__button-image-img" alt="logo-nav-elem" />
+			</div>
+			<div class="elem-container__button-name">{name}</div>
+		</button>
+	</div>
 </li>
-
 
 <style lang="scss">
 	.elem-container {
@@ -43,6 +41,7 @@
 		width: 100%;
 		border: 3px solid rgb(176, 32, 229);
 		&__button {
+			cursor: pointer !important;
 			width: 100%;
 			height: 100%;
 			background: none;

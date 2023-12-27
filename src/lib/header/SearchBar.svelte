@@ -10,6 +10,7 @@
 	let showResults = false;
 	let userInput = '';
 	let hiddenSearchBar = true;
+	
 	function hiddenSearch() {
 		hiddenSearchBar = !hiddenSearchBar;
 	}
@@ -37,7 +38,6 @@
 	$: {
 		showResults ? searchProducts(userInput) : (output = output);
 	}
-
 	function hideResults() {
 		showResults = false;
 	}

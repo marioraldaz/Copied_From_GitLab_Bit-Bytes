@@ -57,10 +57,10 @@
 					min={lowestPrice}
 					max={highestPrice}
 				/>
-				<input type="range" min={lowestPrice} max={highestPrice} bind:value={minPrice} />
+				<input type="range" min={lowestPrice} max={maxPrice} bind:value={minPrice} />
 			</div>
 			<div class="cuerpo__filters__price__max">
-				<input type="range" max={highestPrice} min={lowestPrice} bind:value={maxPrice} />
+				<input type="range" max={highestPrice} min={minPrice} bind:value={maxPrice} />
 				MAX:<input
 					type="number"
 					class="cuerpo__filters__price__max__numberbox"

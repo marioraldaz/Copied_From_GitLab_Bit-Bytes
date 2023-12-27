@@ -5,7 +5,6 @@
 	import User from './profile/User.svelte';
 	import SearchBar from './SearchBar.svelte';
 	import CreatorButton from './CreatorButton.svelte';
-	let active = '';
 
 </script>
 
@@ -21,7 +20,7 @@
 	</div>
 
 	<div class="header__right">
-		{$page.data.username}
+		{$page.data.username ? $page.data.username : "No profile"}
 		<ShoppingCart />
 		<a href="/login">
 			<User />

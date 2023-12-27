@@ -18,7 +18,7 @@
             "id": 1,
             "sale": false,
             "name": "Corsair Vengeance LPX DDR4 3200MHz 32GB 2x32GB",
-            "type": "RAM",
+            "type": "RAMs",
             "brand": "Corsair",
             "GB": 32,
             "logo": "http://localhost:4000/1441-corsair-vengeance-lpx-ddr4-3200mhz-pc4-25600-32gb-2x16gb-cl16.jpg",
@@ -36,7 +36,7 @@
             "id": 2,
             "sale": false,
             "name": "Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
-            "type": "RAM",
+            "type": "RAMs",
             "GB": 8,
             "brand": "Team Group",
             "logo": "http://localhost:4000/1441-corsair-vengeance-lpx-ddr4-3200mhz-pc4-25600-32gb-2x16gb-cl16.jpg",
@@ -158,7 +158,7 @@
             "id": 9,
             "sale": false,
             "name": "Samsung SSD 250GB",
-            "type": "SSD",
+            "type": "SSDs",
             "brand": "Samsung",
             "logo": "http://localhost:4000/samsung250gb.png",
             "price": 89.99,
@@ -168,7 +168,7 @@
               "Specification3",
               "Specification4"
             ],
-            "description": "High-speed Samsung SSD with 250GB storage capacity.",
+            "description": "High-speed Samsung SSDs with 250GB storage capacity.",
             "starts": 2
           },
           {
@@ -243,7 +243,7 @@
             "id": 14,
             "sale": false,
             "name": "AMD Ryzen 7 5800X",
-            "type": "CPU",
+            "type": "CPUs",
             "brand": "AMD",
             "logo": "http://localhost:4000/ryzen7.png",
             "price": 389.99,
@@ -260,7 +260,7 @@
             "id": 15,
             "sale": false,
             "name": "Intel Core i5-11600K",
-            "type": "CPU",
+            "type": "CPUs",
             "brand": "Intel",
             "logo": "http://localhost:4000/i5.png",
             "price": 269.99,
@@ -377,7 +377,7 @@
         "id": 22,
         "sale": false,
         "name": "MSI MPG B550 Gaming Plus Motherboard",
-        "type": "Motherboard",
+        "type": "Motherboards",
         "brand": "MSI",
         "logo": "http://localhost:4000/MSIB550.jpg",
         "price": 159.99,
@@ -387,7 +387,7 @@
           "Specification3",
           "Specification4"
         ],
-        "description": "MSI MPG B550 Gaming Plus Motherboard for gaming and performance builds.",
+        "description": "MSI MPG B550 Gaming Plus Motherboards for gaming and performance builds.",
         "starts": 3
       },
       {

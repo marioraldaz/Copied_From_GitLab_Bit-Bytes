@@ -2,10 +2,11 @@
 	import '/src/lib/body/ProductList.svelte';
 	import { page } from '$app/stores';
 	let productId = $page.params.productId;
+	export let slug;
 </script>
 
-<div class="products1">
-	<h1>{productId}</h1>
+<div class="products">
+	<h1>{slug}</h1>
 </div>
 
 <style>

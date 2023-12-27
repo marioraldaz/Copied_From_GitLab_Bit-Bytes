@@ -86,16 +86,16 @@
 		
 		&__div--specs {
 			font-size: 2rem;
-			height: 25%;
-			width: 40%;
+			height: 3.5rem;
+			width: 12rem;
 			float: left;
-			margin-top: 10rem;
+			margin-top: 12.5rem;
 			margin-left: 2rem;
 			border-radius: 2rem;
 			background-color: rgb(3, 3, 3);
 			color: white;
 			transition: transform 1s;
-
+			cursor:pointer;
 			&:hover {
 				transform: translate(0, -2rem);
 				height: 30%;
@@ -106,21 +106,20 @@
 
 		&__button--buy {
 			font-size: 2rem;
-			height: 25%;
-			width: 40%;
-			color: rgb(255, 255, 255);
+			height: 3.5rem;
+			width: 12rem;
+			float: left;
+			margin-top: 12.5rem;
+			margin-left: 2rem;
 			border-radius: 2rem;
-			margin-top: 10rem;
-			float: right;
-			margin-right: 2rem;
-			cursor: pointer;
-			background-color: black;
+			background-color: rgb(3, 3, 3);
+			color: white;
 			transition: transform 1s;
-
+			cursor:pointer;
 			&:hover {
 				transform: translate(0, -2rem);
 				height: 30%;
-				width: 45%;
+				width: 40%;
 				box-shadow: 1rem 0.5rem 3rem 0.5rem rgb(199, 94, 208);
 			}
 		}
@@ -184,13 +183,13 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
-			height: 40%;
+			height: 30%;
 			background-color: rgb(255, 255, 255);
 		}
 
 		&__box--description {
 			background-color: white;
-			height: 55%;
+			height: 45%;
 			padding: 1rem 1rem 1rem;
 		}
 
@@ -199,7 +198,7 @@
 			color: black;
 			font-weight: bold;
 			height: 33%;
-			font-size: 1.8rem;
+			font-size: 0.8rem;
 
 			&:hover {
 				transform: skewX(-10deg);
@@ -213,9 +212,8 @@
 			position: absolute;
 			z-index: 150;
 			left: 50%;
-			top: 68%;
+			top: 63%;
 			&__stars {
-				margin-top: 0.5rem;
 				width: 400%;
 			}
 		}
@@ -230,7 +228,7 @@
 			height: 15%;
 			position: absolute;
 			left: 20%;
-			top: 70%;
+			top: 60%;
 		}
 	}
 
@@ -239,7 +237,7 @@
 			font-size: 1.3rem;
 		}
 		.component__name {
-			font-size: 2rem;
+			font-size: 1.6rem;
 		}
 
 		.component__price {

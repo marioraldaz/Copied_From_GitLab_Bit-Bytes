@@ -20,7 +20,6 @@
 			}
 		}
 		filteredProducts = newProducts;
-		console.log(filteredProducts);
 	}
 </script>
 
@@ -37,10 +36,10 @@
 						min={lowestPrice}
 						max={highestPrice}
 					/>
-					<input type="range" min={lowestPrice} max={highestPrice} bind:value={minPrice} />
+					<input type="range" min={lowestPrice} max={maxPrice} bind:value={minPrice} />
 				</div>
 				<div class="container__filters__price__bar__max">
-					<input type="range" max={highestPrice} min={lowestPrice} bind:value={maxPrice} />
+					<input type="range" max={highestPrice} min={minPrice} bind:value={maxPrice} />
 					MAX:<input
 						type="number"
 						class="container__filters__price__bar__max__numberbox"
@@ -109,7 +108,7 @@
               font-size: 3rem;
               position: absolute;
               top: 40%;
-              left: 36.3%;
+              left: 45.5%;
               height: 50%;
             }
 		}

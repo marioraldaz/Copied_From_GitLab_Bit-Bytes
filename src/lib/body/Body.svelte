@@ -68,7 +68,7 @@
 			height: 40rem;
 			margin-bottom: 10rem;
 			position: relative;
-			left: 2%;
+			left: 2.5%;
 		}
 	}
 </style>
