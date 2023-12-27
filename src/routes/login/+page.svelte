@@ -5,7 +5,6 @@
 	export let data;
 	const { profiles } = data;
 	const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
-
 </script>
 
 <LogIn {profiles}/>

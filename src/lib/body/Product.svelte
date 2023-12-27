@@ -3,6 +3,7 @@
 	import Stars from './Stars.svelte';
 	export let product;
 	let clicked = false;
+	product.fav = false;
 	function click() {
 		clicked = !clicked;
 		goto(`/${product.name}`);
@@ -11,6 +12,7 @@
 
 <div class="component {clicked ? 'clicked' : 'notClicked'}">
 	<div class="component__side component__side--front">
+		<button class="{product.fav?'component__side--front__fav-star': 'component__side--front__no-fav-star'}"/>
 		<div class="component__img" style="background-image: url({product.logo});" />
 		<div class="component__box--description">
 			<div class="component__name">{product.name}</div>
@@ -81,6 +83,7 @@
 		position: relative;
 		margin: 0;
 		width: 100%;
+		
 		&__div--specs {
 			font-size: 2rem;
 			height: 25%;
@@ -134,7 +137,24 @@
 			margin: 0 auto;
 			&--front {
 				/*       background: linear-gradient(135deg, #00ffec, #0081ff);
-     */
+     */			&__fav-star{
+					width: 6rem;
+					height: 6rem;
+					position: absolute;
+					right: 0;
+					cursor: pointer;
+					background:transparent;
+					background-image: url("/src/lib/body/images/no-fav-star.png");
+					background-size: cover; /* Use cover to fill the container */
+					box-shadow: 0 0 10px rgba(106, 0, 255, 0.5); /* Purple shadow */
+					transition: transform 0.3s ease-in-out;
+					border:none;
+					opacity: 60%;
+					&:hover{
+						transform: scale(130%);
+						opacity: 1;
+					}
+	 			}
 				height: 100%;
 				background-color: rgb(255, 255, 255);
 			}

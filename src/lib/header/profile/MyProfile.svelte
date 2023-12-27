@@ -1,5 +1,10 @@
 <script>
-    
+    import SavedProducts from "./SavedProducts.svelte";
+    import Addresses from "./Addresses.svelte";   
+    import Comments from "./Comments.svelte";
+    import PC_Configs from "./PC_Configs.svelte";
+    import ProfileStats from "./ProfileStats.svelte";
+    import Returns from "./Returns.svelte";
 </script>
 
 <div class="MyProfile">
@@ -27,20 +32,20 @@
             Cambiar contraseña
         </a>
     </div>
-    <div class="MyProfile__savedProducts"></div>
-    <div class="MyProfile__Address"></div>
+    <div class="MyProfile__savedProducts"><SavedProducts/></div>
+    <div class="MyProfile__Address"><Addresses/></div>
     <div class="MyProfile__boughtProducts"></div>
-    <div class="MyProfile__PC_Configs"></div>
-    <div class="MyProfile__stats"></div>
-    <div class="MyProfile__comments"></div>
-    <div class="MyProfile__returns"></div>
+    <div class="MyProfile__PC_Configs"><PC_Configs/></div>
+    <div class="MyProfile__stats"><ProfileStats/></div>
+    <div class="MyProfile__comments"><Comments/></div>
+    <div class="MyProfile__returns"><Returns/></div>
 </div>
 
 
 <style lang="scss">
     .MyProfile{
         background-color: white;
-        width:80%;
+        width:90%;
         min-height: 100vh;
         align-self: center;
         border-radius: 2rem;
@@ -50,7 +55,7 @@
             display: block;
             position: fixed;
             top: 20%;
-            right: 12%;
+            right: 5%;
             border-radius: 3rem;
             background-color:rgb(255, 255, 255);
             border: 0.2rem black;
