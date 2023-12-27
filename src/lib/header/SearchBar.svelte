@@ -104,7 +104,7 @@
 		display: flex;
 		justify-content: center;
 		transition: all 2s ease-out;
-
+		flex-wrap: wrap;
 		&__results {
 			transition: all 0.5s ease-out;
 			width: 150%;
