@@ -3,9 +3,9 @@
 	import shoppingCart from '/src/stores/shoppingCart.js';
 	import Select from '../Select.svelte';
 	import { getComponents, getProducts } from '/src/stores/products';
-	
+	export let products;
+
 	let productSelected = [];
-	let products = getProducts();
 	let PC = {
 		CPU: null,
 		RAM: null,
@@ -15,7 +15,7 @@
 	};
 	let arrays = [];
 	let totalPrice = 0;
-	let arrayComponents = ['Motherboard', 'CPU', 'RAM', 'SSD', 'PC_Case'];
+	let arrayComponents = ['Motherboard', 'CPU', 'RAMs', 'SSD', 'PC_Case'];
 
 	for (let i = 0; i < arrayComponents.length; i++) {
 		arrays.push(getComponents(arrayComponents[i]));
@@ -64,7 +64,9 @@
 		{/each}
 	</div>
 	<h1 class="container__section__price">Total: {totalPrice}$</h1>
-	<button class="container__buy" on:click={buy}><span class="container__buy__text">Add to shopping cart</span></button>
+	<button class="container__buy" on:click={buy}
+		><span class="container__buy__text">Add to shopping cart</span></button
+	>
 </div>
 
 <style lang="scss">
@@ -109,7 +111,7 @@
 			transition: transform 1s;
 			margin-left: 40%;
 			text-align: center;
-			&__text{
+			&__text {
 				margin-left: 5rem;
 			}
 			&:hover {

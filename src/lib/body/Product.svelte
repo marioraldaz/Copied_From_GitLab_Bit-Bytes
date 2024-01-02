@@ -12,7 +12,11 @@
 
 <div class="component {clicked ? 'clicked' : 'notClicked'}">
 	<div class="component__side component__side--front">
-		<button class="{product.fav?'component__side--front__fav-star': 'component__side--front__no-fav-star'}"/>
+		<button
+			class={product.fav
+				? 'component__side--front__fav-star'
+				: 'component__side--front__no-fav-star'}
+		/>
 		<div class="component__img" style="background-image: url({product.logo});" />
 		<div class="component__box--description">
 			<div class="component__name">{product.name}</div>
@@ -83,7 +87,7 @@
 		position: relative;
 		margin: 0;
 		width: 100%;
-		
+
 		&__div--specs {
 			font-size: 2rem;
 			height: 3.5rem;
@@ -95,7 +99,7 @@
 			background-color: rgb(3, 3, 3);
 			color: white;
 			transition: transform 1s;
-			cursor:pointer;
+			cursor: pointer;
 			&:hover {
 				transform: translate(0, -2rem);
 				height: 30%;
@@ -115,7 +119,7 @@
 			background-color: rgb(3, 3, 3);
 			color: white;
 			transition: transform 1s;
-			cursor:pointer;
+			cursor: pointer;
 			&:hover {
 				transform: translate(0, -2rem);
 				height: 30%;
@@ -136,24 +140,25 @@
 			margin: 0 auto;
 			&--front {
 				/*       background: linear-gradient(135deg, #00ffec, #0081ff);
-     */			&__fav-star{
+     */
+				&__fav-star {
 					width: 6rem;
 					height: 6rem;
 					position: absolute;
 					right: 0;
 					cursor: pointer;
-					background:transparent;
-					background-image: url("/src/lib/body/images/no-fav-star.png");
+					background: transparent;
+					background-image: url('/src/lib/body/images/no-fav-star.png');
 					background-size: cover; /* Use cover to fill the container */
 					box-shadow: 0 0 10px rgba(106, 0, 255, 0.5); /* Purple shadow */
 					transition: transform 0.3s ease-in-out;
-					border:none;
+					border: none;
 					opacity: 60%;
-					&:hover{
+					&:hover {
 						transform: scale(130%);
 						opacity: 1;
 					}
-	 			}
+				}
 				height: 100%;
 				background-color: rgb(255, 255, 255);
 			}
@@ -198,8 +203,7 @@
 			color: black;
 			font-weight: bold;
 			height: 33%;
-			font-size: 0.8rem;
-
+			font-size: 2rem;
 			&:hover {
 				transform: skewX(-10deg);
 			}

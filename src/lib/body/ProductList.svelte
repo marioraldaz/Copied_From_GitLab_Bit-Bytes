@@ -2,6 +2,7 @@
 	import Product from './Product.svelte';
 
 	export let products;
+	console.log(products);
 </script>
 
 <div class="list">

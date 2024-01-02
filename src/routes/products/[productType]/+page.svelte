@@ -5,9 +5,10 @@
 	import SSDs from '/src/lib/components/SSDs/SSDs.svelte';
 	import CPUs from '/src/lib/components/CPUs/CPUs.svelte';
 	import GPUs from '/src/lib/components/GPUs/GPUs.svelte';
-	import PC_Creator from '/src/lib/components/PC_Creator/PC_Creator.svelte';
 	import ResultsPage from '/src/lib/body/ResultsPage.svelte';
 
+	export let data;
+	let products = data.products;
 	let productType = $page.params.productType;
 	$: productType = $page.params.productType;
 
@@ -33,10 +34,6 @@
 			component: MotherBoards
 		},
 		{
-			type: 'PC_Creator',
-			component: PC_Creator
-		},
-		{
 			type: 'ResultsPage',
 			component: ResultsPage
 		}
@@ -46,7 +43,7 @@
 
 {#key $page.params.productType}
 	{#if typeToShow}
-		<svelte:component this={typeToShow.component} />
+		<svelte:component this={typeToShow.component} {products} />
 	{:else}
 		<p>Invalid product type</p>
 	{/if}

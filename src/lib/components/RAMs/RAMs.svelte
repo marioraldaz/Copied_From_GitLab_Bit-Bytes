@@ -1,9 +1,8 @@
 <script>
-	import { getComponents } from '/src/stores/products';
 	import ProductList from '/src/lib/body/ProductList.svelte';
 	export let products;
+	let filteredProducts = [];
 	let GBs;
-	products = getComponents('RAM');
 	let prices = [];
 	products.map((product) => prices.push(product.price));
 
@@ -14,7 +13,6 @@
 	let noResultsMessage = false;
 
 	$: {
-		products = getComponents('RAM');
 		let newProducts = [];
 		for (let product of products) {
 			if (product.price >= minPrice && product.price <= maxPrice) {
@@ -25,11 +23,13 @@
 				}
 			}
 		}
-		products = newProducts;
+		filteredProducts = newProducts;
 	}
 
+	//Para filtrar productos guardo los productos RAMs durante toda la ejecucion de la ruta=???
+
 	$: {
-		products.length == 0 ? (noResultsMessage = true) : (noResultsMessage = false);
+		filteredProducts.length == 0 ? (noResultsMessage = true) : (noResultsMessage = false);
 	}
 </script>
 
@@ -72,7 +72,7 @@
 		</div>
 	</div>
 
-	<ProductList {products} />
+	<ProductList products={filteredProducts} />
 
 	{#if noResultsMessage}
 		<h1 class="cuerpo__noResults">We could not find anything that matches your search.</h1>

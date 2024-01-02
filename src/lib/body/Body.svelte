@@ -16,7 +16,7 @@
 			mainImg: 'http://localhost:4000/MSImortar.jpg'
 		},
 		{
-			products: getComponents('RAM'),
+			products: getComponents('RAMs'),
 			mainImg: 'http://localhost:4000/MSImortar.jpg'
 		},
 		{
