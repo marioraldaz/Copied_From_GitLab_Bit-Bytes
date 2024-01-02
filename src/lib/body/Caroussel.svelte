@@ -202,8 +202,8 @@
 					animation-name: moveInactive1Right;
 					animation-timing-function: ease-in-out;
 				}
-				width: 30rem;
-				height: 30rem;
+				width: 3rem;
+				height: 39rem;
 				position: absolute;
 				left: 12%;
 				top: 0%;
@@ -223,7 +223,7 @@
 				}
 				padding: 0.5rem;
 				width: 32rem;
-				height: 37.5rem;
+				height: 39rem;
 				position: absolute;
 				left: 30%;
 				top: 2.5%;
@@ -248,8 +248,8 @@
 					animation-name: moveInactive2Right;
 					animation-timing-function: ease-in-out;
 				}
-				width: 30rem;
-				height: 30rem;
+				width: 32rem;
+				height: 39rem;
 				position: absolute;
 				left: 50%;
 				top: 0%;
@@ -375,8 +375,7 @@
 		from {
 		}
 		to {
-			width: 30rem;
-			height: 30rem;
+			height: 39rem;
 			position: absolute;
 			left: 50%;
 			top: 0%;
@@ -390,9 +389,8 @@
 		from {
 		}
 		to {
-			border: none;
-			width: 20rem;
-			height: 20rem;
+			border: transparent;
+			height: 39rem;
 			position: absolute;
 			left: 50%;
 			top: 0%;
@@ -406,7 +404,7 @@
 		}
 		to {
 			width: 32rem;
-			height: 37.5rem;
+			height: 39rem;
 			position: absolute;
 			left: 30%;
 			top: 2.5%;
@@ -422,12 +420,10 @@
 	@keyframes moveHiddenProdRight {
 		from {
 			opacity: 0%;
-			width: 20rem;
-			height: 20rem;
 		}
 		to {
 			width: 30rem;
-			height: 30rem;
+			height: 39rem;
 			position: absolute;
 			left: 12%;
 			top: 0%;
@@ -466,6 +462,20 @@
 
 		.container__caroussel__previousButton {
 			left: 22.5%;
+		}
+	}
+	@media screen and (max-width: 2600px) {
+		*.openAnimation,
+		*.moveLeft,
+		*.moveRight {
+			animation-duration: 0s;
+		}
+		.container__caroussel__nextButton {
+			left: 65.2%;
+		}
+
+		.container__caroussel__previousButton {
+			left: 10%;
 		}
 	}
 </style>

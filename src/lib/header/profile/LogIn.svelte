@@ -1,43 +1,48 @@
 <script>
 	import { page } from '$app/stores';
 	import { enhance } from '$app/forms';
-	export let profiles=[];
+	export let profiles = [];
 	export let form;
-	let username="";
-	let password="";
+	let username = '';
+	let password = '';
 	let profile;
 	const redirectTo = $page.url.searchParams.get('redirectTo') || '/';
 
 	function trySignIn() {
-		profile=profiles.find((profile) => profile.username == username && profile.password == password);
-		if(!profile){
-			console.log(username)
-			return showError("Username or password are incorrect");
-		} else{
-			signIn(username,password);
+		profile = profiles.find(
+			(profile) => profile.username == username && profile.password == password
+		);
+		if (!profile) {
+			console.log(username);
+			return showError('Username or password are incorrect');
+		} else {
+			signIn(username, password);
 		}
 	}
-	
-	function signIn(username,password){
-		cookies.set("currentProfile",{"username":username, "password":password}, {
-			httpOnly: true,
-			sameSite: 'strict',
-			secure: false,
-			path: '/',
-			maxAge: 60 * 60 * 24 * 7
-		});
+
+	function signIn(username, password) {
+		cookies.set(
+			'currentProfile',
+			{ username: username, password: password },
+			{
+				httpOnly: true,
+				sameSite: 'strict',
+				secure: false,
+				path: '/',
+				maxAge: 60 * 60 * 24 * 7
+			}
+		);
 		return greet(username);
 	}
 
 	function greet(username) {
-		return "<div class='greetMessage' >Hello "+username+" !</div>";
-
+		return "<div class='greetMessage' >Hello " + username + ' !</div>';
 	}
 	function showError(message) {
-		return "<div class='errorMessage' >"+message+"</div>";
+		return "<div class='errorMessage' >" + message + '</div>';
 	}
-	
 </script>
+
 {#if form?.success}
 	<p style="color: green;">You are now logged in!</p>
 {/if}
@@ -47,18 +52,30 @@
 		<form action="" method="post" use:enhance>
 			<div class="text-field">
 				<div class="text-field__text">
-					<input type="text" name="username" bind:value={username} required placeholder="Username" />
+					<input
+						type="text"
+						name="username"
+						bind:value={username}
+						required
+						placeholder="Username"
+					/>
 				</div>
 			</div>
 			<div class="text-field">
 				<div class="text-field__text">
-					<input type="password" name="password" bind:value={password} required placeholder="Password" />
+					<input
+						type="password"
+						name="password"
+						bind:value={password}
+						required
+						placeholder="Password"
+					/>
 				</div>
 			</div>
 			<div class="pass">Forgot Password?</div>
 			<button class="logIn-button" on:click={trySignIn}>Log In </button>
 			<div class="singup_link">
-				Not a member? <a href="/signUp">Sign Up</a>
+				Not a member? <a href="login/register">Sign Up</a>
 			</div>
 		</form>
 	</div>

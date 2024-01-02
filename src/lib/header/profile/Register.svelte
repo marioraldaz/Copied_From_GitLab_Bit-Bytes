@@ -1,27 +1,27 @@
 <script>
-    export let profiles=[];
-    let username="";
-    let password="";
-    let repeatPassword="";
-    function signUp(username, password){
-        if(username.length<6){
-            return newError("Username must be at least 6 characters");
-        } else if(username.length>12){
-            return newError("Username must be at least 12 characters");
-        } else if(password!=repeatPassword){
-            return newError("Passwords do not match");
-        } else if(password.length<6){
-            return newError("Password must be at least 6 characters");
-        } else if(password.length>12){
-            return newError("Password must be at least 12 characters");
-        }
-        let profile=profiles.find((profile)=>profile.username==username);
-        if(!profile){
-         return newError("Username "+username+" is taken");   
-        }
+	export let profiles = [];
+	let username = '';
+	let password = '';
+	let repeatPassword = '';
+	function signUp(username, password) {
+		if (username.length < 6) {
+			return newError('Username must be at least 6 characters');
+		} else if (username.length > 12) {
+			return newError('Username must be at least 12 characters');
+		} else if (password != repeatPassword) {
+			return newError('Passwords do not match');
+		} else if (password.length < 6) {
+			return newError('Password must be at least 6 characters');
+		} else if (password.length > 12) {
+			return newError('Password must be at least 12 characters');
+		}
+		let profile = profiles.find((profile) => profile.username == username);
+		if (!profile) {
+			return newError('Username ' + username + ' is taken');
+		}
 
-        saveNewProfile(profile); //From store or from here?
-    }
+		saveNewProfile(profile); //From store or from here?
+	}
 </script>
 
 <div class="container">
@@ -38,28 +38,28 @@
 					<input type="password" required name="password" placeholder="Password" />
 				</div>
 			</div>
-            <div class="text-field">
+			<div class="text-field">
 				<div class="text-field__text">
 					<input type="password" required name="repeatPassword" placeholder="Repeat Password" />
 				</div>
 			</div>
 			<input type="submit" value="Login" on:click={register} />
 			<div class="singup_link">
-				Already a member? <a href="/signUp">Sign In</a>
+				Already a member? <a href="/login">Sign In</a>
 			</div>
 		</form>
 	</div>
 </div>
 
 <style>
-.container {
+	.container {
 		height: 100vh;
 	}
 	.center {
 		position: absolute;
 		top: 57%;
 		left: 50%;
-        height: 82%;
+		height: 62%;
 		transform: translate(-50%, -50%);
 		width: 400px;
 		background: rgb(255, 255, 255);

@@ -61,7 +61,7 @@ export function searchProducts(search) {
       return output;
     }
     for (var i = 0; i < data.products.length; i++) {
-    if (data.products[i].name.toUpperCase().match(search.toUpperCase())) {
+    if (data.products[i].name.toUpperCase().match(search.toUpperCase()) || (data.products[i].type.toUpperCase().match(search.toUpperCase()))) {
       output.push(data.products[i]);
     }
   }

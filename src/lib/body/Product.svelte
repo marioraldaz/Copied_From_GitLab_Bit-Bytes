@@ -87,7 +87,7 @@
 		position: relative;
 		margin: 0;
 		width: 100%;
-
+		overflow: hidden;
 		&__div--specs {
 			font-size: 2rem;
 			height: 3.5rem;
