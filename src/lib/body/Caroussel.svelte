@@ -183,8 +183,8 @@
 				}
 				background-color: white;
 				z-index: 2;
-				width: 30rem;
-				height: 30rem;
+				width: 32rem;
+				height: 39rem;
 				top: -20%;
 				left: 2.5%;
 				opacity: 0%;
@@ -202,7 +202,7 @@
 					animation-name: moveInactive1Right;
 					animation-timing-function: ease-in-out;
 				}
-				width: 3rem;
+				width: 32rem;
 				height: 39rem;
 				position: absolute;
 				left: 12%;

@@ -1,9 +1,0 @@
-
-
-function GET(){
-
-}
-
-function POST(){
-
-}

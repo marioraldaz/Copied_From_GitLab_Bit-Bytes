@@ -1,9 +1,14 @@
 <script>
 	export let profiles = [];
+	console.log(profiles);
 	let username = '';
 	let password = '';
 	let repeatPassword = '';
-	function signUp(username, password) {
+	function checkProfile() {
+		let profile = profiles.find((profile) => profile.username == username);
+		/*if (!profile) {
+			return newError('Username ' + username + ' is taken');
+		}
 		if (username.length < 6) {
 			return newError('Username must be at least 6 characters');
 		} else if (username.length > 12) {
@@ -14,13 +19,55 @@
 			return newError('Password must be at least 6 characters');
 		} else if (password.length > 12) {
 			return newError('Password must be at least 12 characters');
-		}
-		let profile = profiles.find((profile) => profile.username == username);
-		if (!profile) {
-			return newError('Username ' + username + ' is taken');
-		}
+		}*/
 
-		saveNewProfile(profile); //From store or from here?
+		addProfile(username, password); //Do we need a store or just cookies?
+	}
+
+	async function addProfile(profile) {
+		try {
+			const newProfile = {
+				ID: chooseID(), //Lets say we want to check the lowest ID possible, so if there is one in between it takes it or if not it creates the highest 1 + 1;
+				username: username,
+				password: password,
+				savedProducts: [],
+				addresses: [],
+				stats: [],
+				boughtProducts: [],
+				saved_PC_configs: [],
+				comments: [],
+				returns: []
+			};
+
+			const response = await fetch('http://localhost:4000/profiles', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(newProfile)
+			});
+
+			if (response.ok) {
+				const result = await response.json();
+				console.log('New profile added:', result);
+			} else {
+				console.error('Failed to add new profile:', response.statusText);
+			}
+		} catch (error) {
+			console.error('Error:', error);
+		}
+	}
+
+	function chooseID() {
+		let chosen = 1;
+		profiles.sort((a, b) => a.id - b.id);
+
+		for (let i = 1; i < profiles.length; i++) {
+			if (profiles[i].id !== profiles[i - 1].id + 1) {
+				return (chosen = profiles[i - 1].id + 1);
+			}
+		}
+		return (chosen = profiles[profiles.length - 1].id + 1);
 	}
 </script>
 
@@ -30,12 +77,18 @@
 		<form action="#" method="post">
 			<div class="text-field">
 				<div class="text-field__text">
-					<input type="text" required placeholder="Username" />
+					<input type="text" required bind:value={username} placeholder="Username" />
 				</div>
 			</div>
 			<div class="text-field">
 				<div class="text-field__text">
-					<input type="password" required name="password" placeholder="Password" />
+					<input
+						type="password"
+						bind:value={password}
+						required
+						name="password"
+						placeholder="Password"
+					/>
 				</div>
 			</div>
 			<div class="text-field">
@@ -43,7 +96,7 @@
 					<input type="password" required name="repeatPassword" placeholder="Repeat Password" />
 				</div>
 			</div>
-			<input type="submit" value="Login" on:click={register} />
+			<input type="button" value="Login" on:click={checkProfile} />
 			<div class="singup_link">
 				Already a member? <a href="/login">Sign In</a>
 			</div>
