@@ -20,19 +20,27 @@
 		}
 	}
 
-	function signIn(username, password) {
-		cookies.set(
-			'currentProfile',
-			{ username: username, password: password },
+	async function signIn({ cookies }) {
+		const data = await request.json();
+
+		if (!data.username) {
+			throw error(400, 'Username is required!');
+		}
+
+		if (!data.password) {
+			throw error(400, 'Password is required!');
+		}
+
+		cookies.set('token', 'token_Value', {
+			path: '/' // ya que sino lo fija en /api y sólo será válidas en esa ruta
+		});
+
+		return json(
+			{ name: data.username, id: 1 },
 			{
-				httpOnly: true,
-				sameSite: 'strict',
-				secure: false,
-				path: '/',
-				maxAge: 60 * 60 * 24 * 7
+				status: 200
 			}
 		);
-		return greet(username);
 	}
 
 	function greet(username) {

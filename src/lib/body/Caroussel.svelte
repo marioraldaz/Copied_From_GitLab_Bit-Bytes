@@ -64,6 +64,28 @@
 			movingRight = false;
 		}, 2000);
 	}
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		function reveal() {
+			var reveals = document.querySelectorAll('.container');
+			for (var i = 0; i < reveals.length; i++) {
+				var windowHeight = window.innerHeight;
+				var elementTop = reveals[i].getBoundingClientRect().bottom;
+				var elementVisible = 150;
+				if (elementTop < windowHeight - elementVisible) {
+					console.log(elementTop);
+					reveals[i].classList.remove('active');
+				} else {
+					reveals[i].classList.add('active');
+				}
+			}
+		}
+		window.addEventListener('scroll', reveal);
+
+		// To check the scroll position on page load
+		reveal();
+	});
 </script>
 
 <div class="container">
@@ -136,12 +158,19 @@
 	* {
 		box-sizing: border-box !important;
 	}
+
+	.active {
+		display: none;
+	}
 	.container {
 		height: 100%;
 		width: 100%;
 		padding-bottom: 2.5rem; /* Footer height */
-		animation-duration: 3s;
-		animation-name: slidein;
+		&.active {
+			animation-duration: 3s;
+			animation-name: slidein;
+			opacity: 0.5;
+		}
 		display: inline-block;
 		box-sizing: border-box;
 		background-color: white;
@@ -192,7 +221,7 @@
 			}
 
 			&__inactive1 {
-				&.openAnimation {
+				&.openAnimation .active {
 					animation-duration: 3s;
 					animation-name: slidein2;
 				}

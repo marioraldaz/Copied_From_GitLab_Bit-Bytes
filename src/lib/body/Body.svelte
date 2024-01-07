@@ -30,7 +30,7 @@
 	];
 </script>
 
-<div class="cuerpo">
+<div class="body">
 	<div class="gradiente_img_cabecera">
 		<img
 			class="img_encabezado"
@@ -39,7 +39,7 @@
 		/>
 	</div>
 	{#each bodyCaroussels as bodyCaroussel}
-		<div class="cuerpo__caroussel">
+		<div class="body__caroussel">
 			<Caroussel mainImg={bodyCaroussel.mainImg} products={bodyCaroussel.products} />
 		</div>
 	{/each}
@@ -57,7 +57,7 @@
 		width: 40%;
 	}
 
-	.cuerpo {
+	.body {
 		margin-top: 9rem;
 		overflow: hidden;
 		width: 100%;
